@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImagePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x0R-Ih-ada">
+                                <rect key="frame" x="20" y="64" width="374" height="728"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SE5-Hj-dpd">
+                                <rect key="frame" x="20" y="812" width="374" height="30"/>
+                                <state key="normal" title="이미지 선택하기"/>
+                                <connections>
+                                    <action selector="touchUpSelectImageButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="xR6-mk-gjz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SE5-Hj-dpd" secondAttribute="trailing" constant="20" id="DUh-98-TbH"/>
+                            <constraint firstItem="x0R-Ih-ada" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HF3-ET-1nc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SE5-Hj-dpd" secondAttribute="bottom" constant="20" id="QLl-sH-c8b"/>
+                            <constraint firstItem="x0R-Ih-ada" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="V7J-No-qvC"/>
+                            <constraint firstItem="SE5-Hj-dpd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZjP-uu-pQK"/>
+                            <constraint firstItem="SE5-Hj-dpd" firstAttribute="top" secondItem="x0R-Ih-ada" secondAttribute="bottom" constant="20" id="eQI-A0-UGX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x0R-Ih-ada" secondAttribute="trailing" constant="20" id="qDP-Y6-9IR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="x0R-Ih-ada" id="ORD-1c-Onf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="138"/>
+        </scene>
+    </scenes>
+</document>

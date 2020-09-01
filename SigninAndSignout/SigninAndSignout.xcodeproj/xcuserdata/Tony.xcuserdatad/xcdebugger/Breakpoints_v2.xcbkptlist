@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EDE3083B-3198-4A95-B74A-E08C76962838"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8ECE7D5C-522F-493E-9874-EA7332A3F93E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SigninAndSignout/RegisterViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "valueSetUp(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8ECE7D5C-522F-493E-9874-EA7332A3F93E - 39f741ffa14df285"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SigninAndSignout.RegisterViewController.imagePicker.getter : __C.UIImagePickerController"
+                  moduleName = "SigninAndSignout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tony/Documents/swiftIOS/SigninAndSignout/SigninAndSignout/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "8ECE7D5C-522F-493E-9874-EA7332A3F93E - 76c62ada302b7af6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UIImagePickerController in SigninAndSignout.RegisterViewController.imagePicker.getter : __C.UIImagePickerController"
+                  moduleName = "SigninAndSignout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tony/Documents/swiftIOS/SigninAndSignout/SigninAndSignout/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "30">
+               </Location>
+               <Location
+                  uuid = "8ECE7D5C-522F-493E-9874-EA7332A3F93E - 6c59bcd4d5679e89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SigninAndSignout.RegisterViewController.imagePicker.setter : __C.UIImagePickerController"
+                  moduleName = "SigninAndSignout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tony/Documents/swiftIOS/SigninAndSignout/SigninAndSignout/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "8ECE7D5C-522F-493E-9874-EA7332A3F93E - 46ade9fb300399b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SigninAndSignout.RegisterViewController.imagePicker.modify : __C.UIImagePickerController"
+                  moduleName = "SigninAndSignout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tony/Documents/swiftIOS/SigninAndSignout/SigninAndSignout/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "8ECE7D5C-522F-493E-9874-EA7332A3F93E - 48fc82bdf0e4e1eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SigninAndSignout.RegisterViewController.imagePicker.modify : __C.UIImagePickerController with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SigninAndSignout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tony/Documents/swiftIOS/SigninAndSignout/SigninAndSignout/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "8ECE7D5C-522F-493E-9874-EA7332A3F93E - 399e058270ec9480"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SigninAndSignout.RegisterViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SigninAndSignout.RegisterViewController"
+                  moduleName = "SigninAndSignout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tony/Documents/swiftIOS/SigninAndSignout/SigninAndSignout/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "600">
+               </Location>
+               <Location
+                  uuid = "8ECE7D5C-522F-493E-9874-EA7332A3F93E - d6d49d5ac43dff57"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SigninAndSignout.RegisterViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SigninAndSignout.RegisterViewController&gt;"
+                  moduleName = "SigninAndSignout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tony/Documents/swiftIOS/SigninAndSignout/SigninAndSignout/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "541">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
