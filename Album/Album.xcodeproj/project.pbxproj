@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA1D81F824FFDB1400357FC2 /* ListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D81F724FFDB1400357FC2 /* ListCollectionViewController.swift */; };
+		EA1D81FA24FFF87700357FC2 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D81F924FFF87700357FC2 /* ListCollectionViewCell.swift */; };
 		EA26AD8D24FE12EC00400967 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26AD8C24FE12EC00400967 /* AlbumCollectionViewCell.swift */; };
 		EAB7327024FD0927006CCAFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB7326F24FD0927006CCAFF /* AppDelegate.swift */; };
 		EAB7327224FD0927006CCAFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB7327124FD0927006CCAFF /* SceneDelegate.swift */; };
@@ -14,9 +16,12 @@
 		EAB7327724FD0927006CCAFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB7327524FD0927006CCAFF /* Main.storyboard */; };
 		EAB7327924FD092A006CCAFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAB7327824FD092A006CCAFF /* Assets.xcassets */; };
 		EAB7327C24FD092A006CCAFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB7327A24FD092A006CCAFF /* LaunchScreen.storyboard */; };
+		EAFC2D8B250207710055AC3F /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC2D8A250207710055AC3F /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA1D81F724FFDB1400357FC2 /* ListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewController.swift; sourceTree = "<group>"; };
+		EA1D81F924FFF87700357FC2 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA26AD8C24FE12EC00400967 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		EAB7326C24FD0927006CCAFF /* Album.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Album.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB7326F24FD0927006CCAFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		EAB7327824FD092A006CCAFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAB7327B24FD092A006CCAFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAB7327D24FD092A006CCAFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAFC2D8A250207710055AC3F /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,9 @@
 				EAB7327124FD0927006CCAFF /* SceneDelegate.swift */,
 				EAB7327324FD0927006CCAFF /* ViewController.swift */,
 				EAB7327524FD0927006CCAFF /* Main.storyboard */,
+				EAFC2D8A250207710055AC3F /* ImageViewController.swift */,
+				EA1D81F924FFF87700357FC2 /* ListCollectionViewCell.swift */,
+				EA1D81F724FFDB1400357FC2 /* ListCollectionViewController.swift */,
 				EA26AD8C24FE12EC00400967 /* AlbumCollectionViewCell.swift */,
 				EAB7327824FD092A006CCAFF /* Assets.xcassets */,
 				EAB7327A24FD092A006CCAFF /* LaunchScreen.storyboard */,
@@ -141,8 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA1D81FA24FFF87700357FC2 /* ListCollectionViewCell.swift in Sources */,
 				EA26AD8D24FE12EC00400967 /* AlbumCollectionViewCell.swift in Sources */,
 				EAB7327424FD0927006CCAFF /* ViewController.swift in Sources */,
+				EAFC2D8B250207710055AC3F /* ImageViewController.swift in Sources */,
+				EA1D81F824FFDB1400357FC2 /* ListCollectionViewController.swift in Sources */,
 				EAB7327024FD0927006CCAFF /* AppDelegate.swift in Sources */,
 				EAB7327224FD0927006CCAFF /* SceneDelegate.swift in Sources */,
 			);

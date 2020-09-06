@@ -13,4 +13,8 @@ class AlbumCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var albumTitle: UILabel!
     @IBOutlet weak var albumCount: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        albumImage.layer.cornerRadius = 4
+    }
 }

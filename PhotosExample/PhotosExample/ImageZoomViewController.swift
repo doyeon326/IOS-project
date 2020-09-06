@@ -21,16 +21,20 @@ class ImageZoomViewController: UIViewController,UIScrollViewDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        imageManager.requestImage(for: asset,
-                                  targetSize: CGSize(width: asset.pixelWidth, height: asset.pixelHeight),
-                                  contentMode: .aspectFill,
-                                  options: nil,
-                                  resultHandler: {image, _ in
-                                    self.imageView.image = image
-        })
+        settingUpImage()
+        
+        
+  
 
     }
 
-
+    func settingUpImage(){
+        imageManager.requestImage(for: asset,
+                                    targetSize: CGSize(width: asset.pixelWidth, height: asset.pixelHeight),
+                                    contentMode: .aspectFill,
+                                    options: nil,
+                                    resultHandler: {image, _ in
+                                      self.imageView.image = image
+          })
+    }
 }
