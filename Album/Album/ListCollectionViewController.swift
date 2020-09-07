@@ -17,6 +17,7 @@ class ListCollectionViewController: UICollectionViewController {
     var ascendingStat: Bool = false
     var imageIndex: Int = 0
     var count = 0
+    var images: [UIImage] = []
     
     @IBOutlet var barButton: UIBarButtonItem!
     @IBOutlet weak var shareButton: UIBarButtonItem!
@@ -26,6 +27,8 @@ class ListCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.loadView()
+//        count = 0
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.setToolbarHidden(false, animated: true)
         self.navigationItem.title = results?.localizedTitle //setting up navigation header
@@ -34,11 +37,13 @@ class ListCollectionViewController: UICollectionViewController {
         shareButton.tintColor = UIColor.clear
         trashButton.isEnabled = false
         trashButton.tintColor = UIColor.clear
-            
-
-
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.loadView()
+        count = 0
+        navigationItem.title = results?.localizedTitle
+    }
     // MARK: UICollectionViewDataSource
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -59,6 +64,12 @@ class ListCollectionViewController: UICollectionViewController {
             cell.photoImg.image = image
             
         })
+        
+        if !collectionView.allowsMultipleSelection{
+            cell.layer.borderWidth = 0
+            images.removeAll()
+        }
+        
         return cell
     }
     
@@ -75,12 +86,21 @@ class ListCollectionViewController: UICollectionViewController {
         count += 1
         print(count)
         self.navigationItem.title = "\(count)장 선택"
+        let selectedCell : UICollectionViewCell = collectionView.cellForItem(at: indexPath)!
+            selectedCell.layer.borderWidth = 2
+               
         if !collectionView.allowsMultipleSelection{
+            //한장 선택했을때,
              imageIndex = indexPath.item
              performSegue(withIdentifier: "PresentImage", sender: self)
         }
-        let selectedCell : UICollectionViewCell = collectionView.cellForItem(at: indexPath)!
-        selectedCell.layer.borderWidth = 2
+       
+        //선택된 이미지 저장
+        let asset: PHAsset = fetchResult.object(at: indexPath.item)
+        imageManager.requestImage(for: asset, targetSize: CGSize(width: 115, height: 115), contentMode: .aspectFill, options: nil, resultHandler: {image, _ in
+            self.images.append(image!)
+        })
+        
     }
 
     override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -88,6 +108,8 @@ class ListCollectionViewController: UICollectionViewController {
          self.navigationItem.title = "\(count)장 선택"
          let unselectedCell : UICollectionViewCell = collectionView.cellForItem(at: indexPath)!
               unselectedCell.layer.borderWidth = 0
+        //선택이 헤지가 된 셀 또한 지워줘야함
+        
     }
     
     @IBAction func selectItem(_ sender: UIButton){
@@ -95,9 +117,10 @@ class ListCollectionViewController: UICollectionViewController {
         if collectionView.allowsMultipleSelection{
             count = 0
             self.navigationItem.title = results?.localizedTitle //setting up navigation header
-                       
+           
             selectButton.title = "선택"
             collectionView.allowsMultipleSelection = false
+      
             shareButton.isEnabled = false
             shareButton.tintColor = UIColor.clear
             trashButton.isEnabled = false
@@ -105,6 +128,7 @@ class ListCollectionViewController: UICollectionViewController {
             barButton.isEnabled = true
             barButton.tintColor = UIColor.blue
             collectionView.reloadData()
+        
             
         }
         else{
@@ -116,7 +140,7 @@ class ListCollectionViewController: UICollectionViewController {
             trashButton.tintColor = UIColor.blue
             barButton.isEnabled = false
             barButton.tintColor = UIColor.lightGray
-            
+      
             
         }
         print("selectMultipleitem true")
@@ -166,7 +190,7 @@ class ListCollectionViewController: UICollectionViewController {
       //  let textToShare: String = "안녕하세요, 부스트 코스입니다."
        // let urlToShare: String = "http://www.edwith.org/boostcourse-ios"
         
-        let activityViewController = UIActivityViewController(activityItems: ["hellow.com"], applicationActivities: nil)
+        let activityViewController = UIActivityViewController(activityItems: images, applicationActivities: nil)
         // 2. 기본으로 제공되는 서비스 중 사용하지 않을 UIActivityType 제거(선택 사항)
         activityViewController.excludedActivityTypes = [UIActivity.ActivityType.addToReadingList, UIActivity.ActivityType.assignToContact]
         // 3. 컨트롤러를 닫은 후 실행할 완료 핸들러 지정

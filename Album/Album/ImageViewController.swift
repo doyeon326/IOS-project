@@ -25,6 +25,9 @@ class ImageViewController: UIViewController,UIScrollViewDelegate {
         settingUpTitle()
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.viewDidLoad()
+    }
     
     func settingUpImage(){
         imageManager.requestImage(for: asset,
@@ -53,14 +56,18 @@ class ImageViewController: UIViewController,UIScrollViewDelegate {
     }
     
     @IBAction func deleteAsset(_ sender: Any) {
-        PHPhotoLibrary.shared().performChanges({ PHAssetChangeRequest.deleteAssets([self.asset as Any] as NSArray)}, completionHandler: nil)
+        PHPhotoLibrary.shared().performChanges({ PHAssetChangeRequest.deleteAssets([self.asset as Any] as NSArray)}, completionHandler:nil)
+        
+        self.navigationController?.popViewController(animated: true)
+        //수정사항.. :
+
     }
     //1. OperationQueue().addOperation을 어디에다가 써야 효율적일까?
-//2. 전 controller에서 index를따로 프로퍼티에다가 선언해서 다음 뷰컨트롤러에다가 넘겨줬는데 더 좋은 방법은?
+    //2. 전 controller에서 index를따로 프로퍼티에다가 선언해서 다음 뷰컨트롤러에다가 넘겨줬는데 더 좋은 방법은?
     
     
     @IBAction func shareAsset(_ sender: Any) {
-        let activityViewController = UIActivityViewController(activityItems: [imageView.image], applicationActivities: nil)
+        let activityViewController = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: nil)
         activityViewController.excludedActivityTypes = []
         activityViewController.completionWithItemsHandler = { (activity, success, items, error) in
                    if success {
@@ -83,6 +90,7 @@ class ImageViewController: UIViewController,UIScrollViewDelegate {
         guard let date: Date = asset.creationDate else {
             return
         }
+        
         var timeAndDate:String  = dateFormatter.string(from: date) + "\n" + timeFormatter.string(from: date)
         
         

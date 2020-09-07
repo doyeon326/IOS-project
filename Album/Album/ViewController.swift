@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.loadView()
       navigationController?.setNavigationBarHidden(true, animated: animated)
       navigationController?.setToolbarHidden(true, animated: animated)
         
@@ -193,7 +194,7 @@ extension ViewController: UIScrollViewDelegate {
      수정해야하는 부분 :
      
      ViewController : 헤더부분 제어, 스크롤시 헤더보임
-     ListCollectionView: 아이템 선택시마다 헤더 타이틀 변경, 선택된 아이탬 공유, 삭제, 취소 눌렀을시 선택된아이템 해지
+     ListCollectionView: 선택된 아이탬 공유, 삭제, 취소 눌렀을시 선택된아이템 해지
         // prepare 값 안넘어감... 
      ImageViewController: header 센터 조정, 공유 사진?(icloud 확인), 좋아요일경우 해지, 사진 Zoom 했을 때 이미지 고정
      
