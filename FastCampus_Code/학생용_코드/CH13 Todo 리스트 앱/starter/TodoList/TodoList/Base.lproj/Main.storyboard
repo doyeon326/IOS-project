@@ -188,17 +188,25 @@
                             <constraint firstItem="7ty-ki-hj0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qVz-2Z-wSu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="OSz-xU-p4d" appends="YES" id="Hsl-sC-HJQ"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tasks" image="checkmark.circle.fill" catalog="system" id="zan-H5-GGu"/>
                     <connections>
                         <outlet property="addButton" destination="eQp-3B-ljr" id="z05-WA-tJ0"/>
                         <outlet property="collectionView" destination="Dac-Tr-eM7" id="MeX-33-IFU"/>
                         <outlet property="inputTextField" destination="fWK-w2-iAl" id="zgw-Sp-FGZ"/>
-                        <outlet property="inputViewBottom" destination="fRW-VT-pQx" id="BkC-DG-7TU"/>
+                        <outlet property="inputViewBottom" destination="haZ-cP-HL5" id="hrC-r9-Xd2"/>
                         <outlet property="isTodayButton" destination="J8E-Bn-ARj" id="l13-yZ-WmA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="OSz-xU-p4d">
+                    <connections>
+                        <action selector="tapBG:" destination="BYZ-38-t0r" id="X5t-hZ-lia"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-297.10144927536237" y="1782.5892857142856"/>
         </scene>

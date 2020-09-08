@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D2D968023366E3E00F2B803 /* DayOffPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D967F23366E3E00F2B803 /* DayOffPopUpVC.swift */; };
+		1DA04773233253E900AF0DBC /* SideMenuTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA04772233253E900AF0DBC /* SideMenuTableVC.swift */; };
+		1DA047752332544C00AF0DBC /* WorkStateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA047742332544C00AF0DBC /* WorkStateVC.swift */; };
+		1DA047772332548100AF0DBC /* DayOffApprovalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA047762332548100AF0DBC /* DayOffApprovalVC.swift */; };
+		1DA04779233254D400AF0DBC /* MyTimeSheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA04778233254D400AF0DBC /* MyTimeSheetVC.swift */; };
+		1DA0477B233254E000AF0DBC /* TodayMissionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA0477A233254E000AF0DBC /* TodayMissionVC.swift */; };
+		1DA0477D233254F000AF0DBC /* JobAdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA0477C233254F000AF0DBC /* JobAdVC.swift */; };
+		1DA0477F233254FF00AF0DBC /* LaborContractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA0477E233254FF00AF0DBC /* LaborContractVC.swift */; };
+		1DA047812332550B00AF0DBC /* ProfileSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA047802332550B00AF0DBC /* ProfileSettingVC.swift */; };
+		1DD451D12324CF880045F68C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD451D02324CF880045F68C /* AppDelegate.swift */; };
+		1DD451D32324CF880045F68C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD451D22324CF880045F68C /* LoginVC.swift */; };
+		1DD451D92324CF880045F68C /* EmployeeManagement.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DD451D72324CF880045F68C /* EmployeeManagement.xcdatamodeld */; };
+		1DD451DB2324CF890045F68C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DD451DA2324CF890045F68C /* Assets.xcassets */; };
+		1DD451DE2324CF890045F68C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DD451DC2324CF890045F68C /* LaunchScreen.storyboard */; };
+		1DD451E72324CFBE0045F68C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DD451E52324CFBE0045F68C /* Main.storyboard */; };
+		1DED8776232DDFF8005B6BEA /* CustomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED8775232DDFF8005B6BEA /* CustomAlertController.swift */; };
+		1DED8778232DF0E8005B6BEA /* PolicyPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED8777232DF0E8005B6BEA /* PolicyPopUpViewController.swift */; };
+		1DED877A232E26AA005B6BEA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DED8779232E26AA005B6BEA /* Home.storyboard */; };
+		70906D8F53F5667B9274C7A7 /* Pods_EmployeeManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2FE9557E82E9F6C8A101CD /* Pods_EmployeeManagement.framework */; };
+		D1C2013A2324D19F00280203 /* BasicInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C201392324D19F00280203 /* BasicInfoVC.swift */; };
+		D1C201422324E85E00280203 /* extraInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C201412324E85E00280203 /* extraInfoVC.swift */; };
+		D1C201442324EAA300280203 /* FirstPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C201432324EAA300280203 /* FirstPageVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D2D967F23366E3E00F2B803 /* DayOffPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOffPopUpVC.swift; sourceTree = "<group>"; };
+		1DA0476A2332260C00AF0DBC /* EmployeeManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmployeeManagement-Bridging-Header.h"; sourceTree = "<group>"; };
+		1DA04772233253E900AF0DBC /* SideMenuTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableVC.swift; sourceTree = "<group>"; };
+		1DA047742332544C00AF0DBC /* WorkStateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkStateVC.swift; sourceTree = "<group>"; };
+		1DA047762332548100AF0DBC /* DayOffApprovalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOffApprovalVC.swift; sourceTree = "<group>"; };
+		1DA04778233254D400AF0DBC /* MyTimeSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTimeSheetVC.swift; sourceTree = "<group>"; };
+		1DA0477A233254E000AF0DBC /* TodayMissionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMissionVC.swift; sourceTree = "<group>"; };
+		1DA0477C233254F000AF0DBC /* JobAdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobAdVC.swift; sourceTree = "<group>"; };
+		1DA0477E233254FF00AF0DBC /* LaborContractVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaborContractVC.swift; sourceTree = "<group>"; };
+		1DA047802332550B00AF0DBC /* ProfileSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingVC.swift; sourceTree = "<group>"; };
+		1DD451CD2324CF880045F68C /* EmployeeManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeeManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DD451D02324CF880045F68C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1DD451D22324CF880045F68C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		1DD451D82324CF880045F68C /* EmployeeManagement.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmployeeManagement.xcdatamodel; sourceTree = "<group>"; };
+		1DD451DA2324CF890045F68C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DD451DD2324CF890045F68C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1DD451DF2324CF890045F68C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DD451E62324CFBE0045F68C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1DED8775232DDFF8005B6BEA /* CustomAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertController.swift; sourceTree = "<group>"; };
+		1DED8777232DF0E8005B6BEA /* PolicyPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyPopUpViewController.swift; sourceTree = "<group>"; };
+		1DED8779232E26AA005B6BEA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		2A2FE9557E82E9F6C8A101CD /* Pods_EmployeeManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmployeeManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81786E318E720BE0FF04E3F9 /* Pods-EmployeeManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmployeeManagement.release.xcconfig"; path = "Target Support Files/Pods-EmployeeManagement/Pods-EmployeeManagement.release.xcconfig"; sourceTree = "<group>"; };
+		BADA3B041A8AD3F30AD02788 /* Pods-EmployeeManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmployeeManagement.debug.xcconfig"; path = "Target Support Files/Pods-EmployeeManagement/Pods-EmployeeManagement.debug.xcconfig"; sourceTree = "<group>"; };
+		D1C201392324D19F00280203 /* BasicInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInfoVC.swift; sourceTree = "<group>"; };
+		D1C201412324E85E00280203 /* extraInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extraInfoVC.swift; sourceTree = "<group>"; };
+		D1C201432324EAA300280203 /* FirstPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DD451CA2324CF880045F68C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70906D8F53F5667B9274C7A7 /* Pods_EmployeeManagement.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DA0476C233252A100AF0DBC /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				1DA04771233252E800AF0DBC /* Work Management */,
+				1DA04770233252E200AF0DBC /* Today Mission */,
+				1DA0476F233252CD00AF0DBC /* Job Ad */,
+				1DA0476E233252C900AF0DBC /* Labor Contract */,
+				1DA0476D233252C600AF0DBC /* Setting */,
+				1DA04772233253E900AF0DBC /* SideMenuTableVC.swift */,
+			);
+			path = "Main Menu";
+			sourceTree = "<group>";
+		};
+		1DA0476D233252C600AF0DBC /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				1DA047802332550B00AF0DBC /* ProfileSettingVC.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		1DA0476E233252C900AF0DBC /* Labor Contract */ = {
+			isa = PBXGroup;
+			children = (
+				1DA0477E233254FF00AF0DBC /* LaborContractVC.swift */,
+			);
+			path = "Labor Contract";
+			sourceTree = "<group>";
+		};
+		1DA0476F233252CD00AF0DBC /* Job Ad */ = {
+			isa = PBXGroup;
+			children = (
+				1DA0477C233254F000AF0DBC /* JobAdVC.swift */,
+			);
+			path = "Job Ad";
+			sourceTree = "<group>";
+		};
+		1DA04770233252E200AF0DBC /* Today Mission */ = {
+			isa = PBXGroup;
+			children = (
+				1DA0477A233254E000AF0DBC /* TodayMissionVC.swift */,
+			);
+			path = "Today Mission";
+			sourceTree = "<group>";
+		};
+		1DA04771233252E800AF0DBC /* Work Management */ = {
+			isa = PBXGroup;
+			children = (
+				1DA047742332544C00AF0DBC /* WorkStateVC.swift */,
+				1DA047762332548100AF0DBC /* DayOffApprovalVC.swift */,
+				1D2D967F23366E3E00F2B803 /* DayOffPopUpVC.swift */,
+				1DA04778233254D400AF0DBC /* MyTimeSheetVC.swift */,
+			);
+			path = "Work Management";
+			sourceTree = "<group>";
+		};
+		1DD451C42324CF880045F68C = {
+			isa = PBXGroup;
+			children = (
+				1DD451CF2324CF880045F68C /* EmployeeManagement */,
+				1DD451CE2324CF880045F68C /* Products */,
+				B97D86C1C24BA7F7E4DD1365 /* Pods */,
+				E4D4BCE251A3E3AC94682DE6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1DD451CE2324CF880045F68C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DD451CD2324CF880045F68C /* EmployeeManagement.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DD451CF2324CF880045F68C /* EmployeeManagement */ = {
+			isa = PBXGroup;
+			children = (
+				1DA0476A2332260C00AF0DBC /* EmployeeManagement-Bridging-Header.h */,
+				1DED8774232DDFBF005B6BEA /* Custom Controller */,
+				D1C201382324D16200280203 /* Sign Up */,
+				1DA0476C233252A100AF0DBC /* Main Menu */,
+				1DD451D02324CF880045F68C /* AppDelegate.swift */,
+				1DD451D22324CF880045F68C /* LoginVC.swift */,
+				1DD451DA2324CF890045F68C /* Assets.xcassets */,
+				1DD451E52324CFBE0045F68C /* Main.storyboard */,
+				1DED8779232E26AA005B6BEA /* Home.storyboard */,
+				1DD451DC2324CF890045F68C /* LaunchScreen.storyboard */,
+				1DD451DF2324CF890045F68C /* Info.plist */,
+				1DD451D72324CF880045F68C /* EmployeeManagement.xcdatamodeld */,
+				D1C201432324EAA300280203 /* FirstPageVC.swift */,
+			);
+			path = EmployeeManagement;
+			sourceTree = "<group>";
+		};
+		1DED8774232DDFBF005B6BEA /* Custom Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DED8775232DDFF8005B6BEA /* CustomAlertController.swift */,
+			);
+			path = "Custom Controller";
+			sourceTree = "<group>";
+		};
+		B97D86C1C24BA7F7E4DD1365 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BADA3B041A8AD3F30AD02788 /* Pods-EmployeeManagement.debug.xcconfig */,
+				81786E318E720BE0FF04E3F9 /* Pods-EmployeeManagement.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D1C201382324D16200280203 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				D1C201392324D19F00280203 /* BasicInfoVC.swift */,
+				D1C201412324E85E00280203 /* extraInfoVC.swift */,
+				1DED8777232DF0E8005B6BEA /* PolicyPopUpViewController.swift */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		E4D4BCE251A3E3AC94682DE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A2FE9557E82E9F6C8A101CD /* Pods_EmployeeManagement.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DD451CC2324CF880045F68C /* EmployeeManagement */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DD451E22324CF890045F68C /* Build configuration list for PBXNativeTarget "EmployeeManagement" */;
+			buildPhases = (
+				2539E3B8193B3AD7B266E50A /* [CP] Check Pods Manifest.lock */,
+				1DD451C92324CF880045F68C /* Sources */,
+				1DD451CA2324CF880045F68C /* Frameworks */,
+				1DD451CB2324CF880045F68C /* Resources */,
+				7809D4D8019A2477BA5BE49C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmployeeManagement;
+			productName = EmployeeManagement;
+			productReference = 1DD451CD2324CF880045F68C /* EmployeeManagement.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DD451C52324CF880045F68C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = kings;
+				TargetAttributes = {
+					1DD451CC2324CF880045F68C = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = 1DD451C82324CF880045F68C /* Build configuration list for PBXProject "EmployeeManagement" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1DD451C42324CF880045F68C;
+			productRefGroup = 1DD451CE2324CF880045F68C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DD451CC2324CF880045F68C /* EmployeeManagement */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DD451CB2324CF880045F68C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DD451E72324CFBE0045F68C /* Main.storyboard in Resources */,
+				1DD451DE2324CF890045F68C /* LaunchScreen.storyboard in Resources */,
+				1DD451DB2324CF890045F68C /* Assets.xcassets in Resources */,
+				1DED877A232E26AA005B6BEA /* Home.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2539E3B8193B3AD7B266E50A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EmployeeManagement-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7809D4D8019A2477BA5BE49C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EmployeeManagement/Pods-EmployeeManagement-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EmployeeManagement/Pods-EmployeeManagement-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EmployeeManagement/Pods-EmployeeManagement-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DD451C92324CF880045F68C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DA047772332548100AF0DBC /* DayOffApprovalVC.swift in Sources */,
+				1DA0477B233254E000AF0DBC /* TodayMissionVC.swift in Sources */,
+				1DD451D32324CF880045F68C /* LoginVC.swift in Sources */,
+				D1C201422324E85E00280203 /* extraInfoVC.swift in Sources */,
+				1D2D968023366E3E00F2B803 /* DayOffPopUpVC.swift in Sources */,
+				1DD451D12324CF880045F68C /* AppDelegate.swift in Sources */,
+				1DA04779233254D400AF0DBC /* MyTimeSheetVC.swift in Sources */,
+				1DA0477F233254FF00AF0DBC /* LaborContractVC.swift in Sources */,
+				1DA047752332544C00AF0DBC /* WorkStateVC.swift in Sources */,
+				1DED8778232DF0E8005B6BEA /* PolicyPopUpViewController.swift in Sources */,
+				1DA04773233253E900AF0DBC /* SideMenuTableVC.swift in Sources */,
+				1DA047812332550B00AF0DBC /* ProfileSettingVC.swift in Sources */,
+				D1C201442324EAA300280203 /* FirstPageVC.swift in Sources */,
+				1DED8776232DDFF8005B6BEA /* CustomAlertController.swift in Sources */,
+				1DD451D92324CF880045F68C /* EmployeeManagement.xcdatamodeld in Sources */,
+				D1C2013A2324D19F00280203 /* BasicInfoVC.swift in Sources */,
+				1DA0477D233254F000AF0DBC /* JobAdVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1DD451DC2324CF890045F68C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DD451DD2324CF890045F68C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1DD451E52324CFBE0045F68C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DD451E62324CFBE0045F68C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DD451E02324CF890045F68C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1DD451E12324CF890045F68C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DD451E32324CF890045F68C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BADA3B041A8AD3F30AD02788 /* Pods-EmployeeManagement.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CV6S9BQASY;
+				INFOPLIST_FILE = EmployeeManagement/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.kings.PalmBox.EmployeeManagement;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/EmployeeManagement/EmployeeManagement-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1DD451E42324CF890045F68C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81786E318E720BE0FF04E3F9 /* Pods-EmployeeManagement.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CV6S9BQASY;
+				INFOPLIST_FILE = EmployeeManagement/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.kings.PalmBox.EmployeeManagement;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/EmployeeManagement/EmployeeManagement-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DD451C82324CF880045F68C /* Build configuration list for PBXProject "EmployeeManagement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DD451E02324CF890045F68C /* Debug */,
+				1DD451E12324CF890045F68C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DD451E22324CF890045F68C /* Build configuration list for PBXNativeTarget "EmployeeManagement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DD451E32324CF890045F68C /* Debug */,
+				1DD451E42324CF890045F68C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1DD451D72324CF880045F68C /* EmployeeManagement.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1DD451D82324CF880045F68C /* EmployeeManagement.xcdatamodel */,
+			);
+			currentVersion = 1DD451D82324CF880045F68C /* EmployeeManagement.xcdatamodel */;
+			path = EmployeeManagement.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1DD451C52324CF880045F68C /* Project object */;
+}
