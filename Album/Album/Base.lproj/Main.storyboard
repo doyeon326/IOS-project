@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rnd-UC-o86">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rnd-UC-o86">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,33 +20,33 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nRu-N1-xU9">
-                                    <size key="itemSize" width="206" height="241"/>
-                                    <size key="headerReferenceSize" width="414" height="120"/>
+                                    <size key="itemSize" width="206" height="250"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCollectionViewCell" id="MXp-VK-cBA" customClass="AlbumCollectionViewCell" customModule="Album" customModuleProvider="target">
-                                        <rect key="frame" x="104" y="120" width="206" height="241"/>
+                                        <rect key="frame" x="104" y="0.0" width="206" height="250"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SJE-iL-Y0k">
-                                            <rect key="frame" x="0.0" y="0.0" width="206" height="241"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="206" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="208-tt-aPX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="198" height="198"/>
+                                                    <rect key="frame" x="0.0" y="10" width="198" height="198"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="208-tt-aPX" secondAttribute="height" multiplier="1:1" id="uq9-dM-ics"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앨범명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZR-Xg-cxr">
-                                                    <rect key="frame" x="0.0" y="202" width="206" height="21"/>
+                                                    <rect key="frame" x="0.0" y="212" width="206" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxK-NL-DAQ">
-                                                    <rect key="frame" x="0.0" y="226" width="206" height="17"/>
+                                                    <rect key="frame" x="0.0" y="236" width="206" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -58,13 +58,13 @@
                                                 <constraint firstItem="208-tt-aPX" firstAttribute="leading" secondItem="SJE-iL-Y0k" secondAttribute="leading" id="5wZ-yV-XbZ"/>
                                                 <constraint firstItem="MxK-NL-DAQ" firstAttribute="top" secondItem="hZR-Xg-cxr" secondAttribute="bottom" constant="3" id="Apx-3z-LrH"/>
                                                 <constraint firstAttribute="trailing" secondItem="hZR-Xg-cxr" secondAttribute="trailing" id="CEK-t5-SfB"/>
-                                                <constraint firstItem="208-tt-aPX" firstAttribute="top" secondItem="SJE-iL-Y0k" secondAttribute="top" id="LKj-ir-nu6"/>
+                                                <constraint firstItem="208-tt-aPX" firstAttribute="top" secondItem="SJE-iL-Y0k" secondAttribute="top" constant="10" id="LKj-ir-nu6"/>
                                                 <constraint firstItem="MxK-NL-DAQ" firstAttribute="leading" secondItem="SJE-iL-Y0k" secondAttribute="leading" id="c9G-Jo-aOR"/>
                                                 <constraint firstItem="hZR-Xg-cxr" firstAttribute="top" secondItem="208-tt-aPX" secondAttribute="bottom" constant="4" id="qpr-TR-oWm"/>
                                                 <constraint firstAttribute="trailing" secondItem="MxK-NL-DAQ" secondAttribute="trailing" id="u4A-0E-WqA"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="206" height="241"/>
+                                        <size key="customSize" width="206" height="250"/>
                                         <connections>
                                             <outlet property="albumCount" destination="MxK-NL-DAQ" id="Nmo-qa-ROB"/>
                                             <outlet property="albumImage" destination="208-tt-aPX" id="bYc-6Q-XUb"/>
@@ -73,23 +73,6 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Albumheader" id="XAm-ww-rOs">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앨범" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG6-mX-8CN">
-                                            <rect key="frame" x="8" y="57" width="52" height="36"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="aG6-mX-8CN" secondAttribute="trailing" constant="354" id="Aqq-am-h9b"/>
-                                        <constraint firstItem="aG6-mX-8CN" firstAttribute="leading" secondItem="XAm-ww-rOs" secondAttribute="leading" constant="8" id="VCM-Ia-XuG"/>
-                                        <constraint firstItem="aG6-mX-8CN" firstAttribute="top" secondItem="XAm-ww-rOs" secondAttribute="top" constant="57" id="WJI-Yh-YD3"/>
-                                    </constraints>
-                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="RTh-BX-Lfv"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="vCR-2g-hip"/>
@@ -110,7 +93,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" title="앨범" id="ZL4-7i-TEz"/>
+                    <navigationItem key="navigationItem" title="앨범" largeTitleDisplayMode="always" id="ZL4-7i-TEz"/>
                     <connections>
                         <outlet property="collectionView" destination="fFl-SA-MFy" id="VWt-u3-mlB"/>
                     </connections>
@@ -124,7 +107,7 @@
             <objects>
                 <collectionViewController id="eRM-UC-8ON" customClass="ListCollectionViewController" customModule="Album" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="YG6-RL-Vis">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ofe-7p-EWr">
@@ -179,7 +162,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Bm9-r3-eg5"/>
                         <barButtonItem systemItem="trash" id="A0X-SL-Zrm"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Title" id="THb-de-Ev9">
+                    <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="THb-de-Ev9">
                         <barButtonItem key="rightBarButtonItem" title="select" id="RcQ-Uy-ABN">
                             <connections>
                                 <action selector="selectItem:" destination="eRM-UC-8ON" id="hMs-tq-Zpb"/>
@@ -204,11 +187,11 @@
             <objects>
                 <viewController id="hW8-yn-w5P" customClass="ImageViewController" customModule="Album" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wX7-T9-54t">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="PDT-4p-6B1">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TZB-X3-cmf">
                                         <rect key="frame" x="0.0" y="200" width="414" height="324"/>
@@ -257,7 +240,7 @@
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Date \nTime" id="M1s-Io-LKl"/>
+                    <navigationItem key="navigationItem" title="Date \nTime" largeTitleDisplayMode="never" id="M1s-Io-LKl"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="favoriteBar" destination="Esb-64-Zk0" id="OnD-vZ-Rby"/>
@@ -273,9 +256,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="Rnd-UC-o86" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gvp-V4-LL6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="gvp-V4-LL6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wkE-Ps-Fdq">

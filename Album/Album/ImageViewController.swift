@@ -81,6 +81,7 @@ class ImageViewController: UIViewController,UIScrollViewDelegate {
         
     }
     func settingUpTitle(){
+        //navigationController?.navigationBar.prefersLargeTitles = false
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
@@ -100,5 +101,7 @@ class ImageViewController: UIViewController,UIScrollViewDelegate {
              label.textAlignment = NSTextAlignment.center
              label.text = timeAndDate
              self.navigationItem.titleView = label
+        
+        //
     }
 }

@@ -27,11 +27,10 @@ class ListCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.loadView()
-//        count = 0
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.setToolbarHidden(false, animated: true)
         self.navigationItem.title = results?.localizedTitle //setting up navigation header
+       // navigationController?.navigationBar.prefersLargeTitles = false
         
         shareButton.isEnabled = false
         shareButton.tintColor = UIColor.clear
@@ -169,7 +168,6 @@ class ListCollectionViewController: UICollectionViewController {
 //        nextViewController.asset = self.fetchResult.object(at: indexPath.item)
 //        nextViewController.str = "hello"
         if (segue.identifier == "PresentImage") {
-
             if let vc: ImageViewController = segue.destination as? ImageViewController {
 //            guard let cell: ListCollectionViewCell = sender as? ListCollectionViewCell else { return }
          //   guard let indexPath = self.collectionView.indexPath(for: cell) else { return }

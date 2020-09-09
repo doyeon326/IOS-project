@@ -11,33 +11,33 @@ import Photos
 
 class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-   // var fetchResult: PHFetchResult<PHAsset>! //하나의 데이터
     let imageManager: PHCachingImageManager = PHCachingImageManager()
-    //var fetchAlbumResults: PHFetchResult<PHAssetCollection>!
     var results:[PHAssetCollection] = [] //앨범을 담을 곳
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         authorizationStatus()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        UIApplication.shared.statusBarStyle = .lightContent
+
         collectionView.reloadData()
+        
         //viewdidload에 넣어줘야함 하지만 뒤로갈땐?
-        navigationController?.setNavigationBarHidden(true, animated: true)
+     //   navigationController?.setNavigationBarHidden(true, animated: true)
         navigationController?.setToolbarHidden(true, animated: true)
      
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.loadView()
-      navigationController?.setNavigationBarHidden(true, animated: animated)
+        collectionView.reloadData()
+        //self.loadView()
+       //navigationController?.setNavigationBarHidden(true, animated: animated)
       navigationController?.setToolbarHidden(true, animated: animated)
-        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-       // navigationController?.setNavigationBarHidden(false, animated: animated)
         navigationController?.setToolbarHidden(false, animated: animated)
-        
     }
     
     func requestAlbums(){
@@ -50,10 +50,7 @@ class ViewController: UIViewController {
         
         let systemAlbumResult: PHFetchResult<PHAssetCollection> =
             PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .any, options: nil)
-           
         let userAlbumResult: PHFetchResult<PHAssetCollection> = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: nil)
-        
-        
 
         //만약 해당 앨범의 사진의 갯수가 0 보다 크다면 results에대가 앨범을 append
         systemAlbumResult.enumerateObjects({(collection, index, object) in
@@ -72,6 +69,7 @@ class ViewController: UIViewController {
        //print(userAlbumResult.object(at: 0).localizedTitle)
     }
 
+    
     func authorizationStatus(){
         let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
         
@@ -134,33 +132,10 @@ extension ViewController: UICollectionViewDataSource {
                                   options: nil,
                                   resultHandler: { image, _ in
                                     cell.albumImage.image = image
-                                    
         })
         return cell
     }
-    
-    //header
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if (kind == UICollectionView.elementKindSectionHeader) {
-            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Albumheader", for: indexPath)
-            // Customize headerView here
-            let border = UIView(frame: CGRect(x: 0,y: 105,width: self.view.bounds.width,height: 1))
-            border.backgroundColor = UIColor.lightGray
-            headerView.addSubview(border)
-            
-            return headerView
-        }
-        fatalError()
-    }
-    
    
-}
-
-extension ViewController: UICollectionViewDelegate {
-    //after clicked
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout{
@@ -200,5 +175,8 @@ extension ViewController: UIScrollViewDelegate {
      
      
      */
+    
+
+ 
 }
 
