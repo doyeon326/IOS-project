@@ -69,9 +69,5 @@ class ViewController: UIViewController {
                imageView.addGestureRecognizer(swipeLeft)
     }
  
-    @IBAction func skipToNextView(_ sender: Any) {
-        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "login")else { return }
-        self.present(nextVC, animated: true)
-       }
 }
 
