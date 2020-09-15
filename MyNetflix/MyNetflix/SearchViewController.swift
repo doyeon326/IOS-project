@@ -39,7 +39,7 @@ extension SearchViewController: UISearchBarDelegate {
         
         SearchAPI.search(searchTerm) { movies in
             // collectionView로 표현하기
-            print("--> 몇개 넘어왔어?? \(movies.count), 첫번째꺼 제목: \(movies.first?.title)")
+            //print("--> 몇개 넘어왔어?? \(movies.count), 첫번째꺼 제목: \(movies.first?.title)")
         }
         print("-->clicked \(searchTerm)")
     }
