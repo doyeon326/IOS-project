@@ -160,22 +160,40 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ULj-RF-AoN">
                                 <rect key="frame" x="0.0" y="100" width="414" height="713"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VxP-ki-ULa">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VxP-ki-ULa">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zy0-XE-M6u">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ResultCell" id="zy0-XE-M6u" customClass="ResultCell" customModule="MyNetflix" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2vd-pw-Gc5">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VBJ-Jr-DgA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="VBJ-Jr-DgA" secondAttribute="bottom" id="4g0-tn-XdA"/>
+                                                <constraint firstItem="VBJ-Jr-DgA" firstAttribute="leading" secondItem="2vd-pw-Gc5" secondAttribute="leading" id="XYd-zq-ESM"/>
+                                                <constraint firstItem="VBJ-Jr-DgA" firstAttribute="top" secondItem="2vd-pw-Gc5" secondAttribute="top" id="Xkq-1Z-dZM"/>
+                                                <constraint firstAttribute="trailing" secondItem="VBJ-Jr-DgA" secondAttribute="trailing" id="Zhy-bW-nLl"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="movieThumbnail" destination="VBJ-Jr-DgA" id="lbm-AS-5tB"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Lf4-yK-Bdw" id="Qfp-Ks-1gq"/>
+                                    <outlet property="delegate" destination="Lf4-yK-Bdw" id="xjT-TQ-37F"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		94DFD7532435CED7009687ED /* RecommendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DFD7522435CED7009687ED /* RecommendListViewController.swift */; };
 		94DFD7552435DA88009687ED /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DFD7542435DA88009687ED /* SearchViewController.swift */; };
 		94DFD7812436F11B009687ED /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DFD7802436F11B009687ED /* PlayerView.swift */; };
+		EA4DF056251129040051746C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EA4DF055251129040051746C /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA4DF056251129040051746C /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +118,7 @@
 			);
 			name = MyNetflix;
 			packageProductDependencies = (
+				EA4DF055251129040051746C /* Kingfisher */,
 			);
 			productName = MyNetflix;
 			productReference = 9409834B243468AA00FD1040 /* MyNetflix.app */;
@@ -146,6 +149,7 @@
 			);
 			mainGroup = 94098342243468AA00FD1040;
 			packageReferences = (
+				EA4DF054251129040051746C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 9409834C243468AA00FD1040 /* Products */;
 			projectDirPath = "";
@@ -380,6 +384,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA4DF054251129040051746C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA4DF055251129040051746C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA4DF054251129040051746C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 94098343243468AA00FD1040 /* Project object */;
 }
