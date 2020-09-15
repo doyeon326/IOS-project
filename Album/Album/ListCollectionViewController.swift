@@ -10,7 +10,7 @@ import UIKit
 import Photos
 
 
-class ListCollectionViewController: UICollectionViewController {
+class ListCollectionViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout  {
     var results: PHAssetCollection? 
     var fetchResult : PHFetchResult<PHAsset>!
     let imageManager: PHCachingImageManager = PHCachingImageManager()
@@ -59,7 +59,7 @@ class ListCollectionViewController: UICollectionViewController {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListCollectionViewCell", for: indexPath) as? ListCollectionViewCell else { return UICollectionViewCell() }
         
         let asset: PHAsset = fetchResult.object(at: indexPath.item)
-        imageManager.requestImage(for: asset, targetSize: CGSize(width: 115, height: 115), contentMode: .aspectFill, options: nil, resultHandler: {image, _ in
+        imageManager.requestImage(for: asset, targetSize: CGSize(width: asset.pixelWidth, height: asset.pixelHeight), contentMode: .aspectFill, options: nil, resultHandler: {image, _ in
             cell.photoImg.image = image
             
         })
@@ -79,6 +79,9 @@ class ListCollectionViewController: UICollectionViewController {
             let height = width
             return CGSize(width: width, height: height)
     }
+
+
+ 
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("you selected cell \(indexPath.item)")
