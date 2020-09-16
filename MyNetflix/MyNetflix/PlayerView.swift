@@ -1,10 +1,3 @@
-//
-//  Preview.swift
-//  MyNetflix
-//
-//  Created by joonwon lee on 2020/04/03.
-//  Copyright © 2020 com.joonwon. All rights reserved.
-//
 
 // https://developer.apple.com/documentation/avfoundation/avplayerlayer
 
