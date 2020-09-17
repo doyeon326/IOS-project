@@ -27,13 +27,53 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRg-Gn-pEG">
+                                <rect key="frame" x="179" y="340" width="56" height="30"/>
+                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="CREATE"/>
+                                <connections>
+                                    <action selector="createCustomer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9o3-pz-PTa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AM5-Vi-W94">
+                                <rect key="frame" x="187.5" y="433" width="39" height="30"/>
+                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="READ"/>
+                                <connections>
+                                    <action selector="fetchCustomer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ibw-1a-lc9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBM-pN-oWb">
+                                <rect key="frame" x="178.5" y="540" width="57" height="30"/>
+                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="UPDATE"/>
+                                <connections>
+                                    <action selector="updateCustomer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hbG-rO-ysD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7C-b1-Cym">
+                                <rect key="frame" x="179.5" y="636" width="55" height="30"/>
+                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="DELETE"/>
+                                <connections>
+                                    <action selector="deleteCustomer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xjI-ix-tGB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="AM5-Vi-W94" firstAttribute="top" secondItem="fRg-Gn-pEG" secondAttribute="bottom" constant="63" id="2Y3-fo-0Ek"/>
+                            <constraint firstItem="fRg-Gn-pEG" firstAttribute="top" secondItem="2Ls-W2-63U" secondAttribute="bottom" constant="62" id="4qf-iW-VQs"/>
                             <constraint firstItem="Hdb-TS-dit" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Kif-eK-2VR"/>
+                            <constraint firstItem="Y7C-b1-Cym" firstAttribute="centerX" secondItem="kBM-pN-oWb" secondAttribute="centerX" id="MW5-Nk-x7P"/>
+                            <constraint firstItem="kBM-pN-oWb" firstAttribute="centerX" secondItem="AM5-Vi-W94" secondAttribute="centerX" id="Mtq-wv-mG2"/>
+                            <constraint firstItem="kBM-pN-oWb" firstAttribute="top" secondItem="AM5-Vi-W94" secondAttribute="bottom" constant="77" id="foe-LC-vnQ"/>
                             <constraint firstItem="2Ls-W2-63U" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hSw-tF-nPB"/>
+                            <constraint firstItem="fRg-Gn-pEG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="haa-9J-E5y"/>
+                            <constraint firstItem="AM5-Vi-W94" firstAttribute="centerX" secondItem="fRg-Gn-pEG" secondAttribute="centerX" id="ih9-QC-dYD"/>
                             <constraint firstItem="Hdb-TS-dit" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="119" id="kHd-AQ-kQD"/>
                             <constraint firstItem="2Ls-W2-63U" firstAttribute="top" secondItem="Hdb-TS-dit" secondAttribute="bottom" constant="73" id="w5s-1T-CXz"/>
+                            <constraint firstItem="Y7C-b1-Cym" firstAttribute="top" secondItem="kBM-pN-oWb" secondAttribute="bottom" constant="66" id="yJG-Fc-s8b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
