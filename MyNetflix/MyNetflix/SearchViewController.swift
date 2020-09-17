@@ -1,17 +1,13 @@
-//
-//  SearchViewController.swift
-//  MyNetflix
-//
-//  Created by joonwon lee on 2020/04/02.
-//  Copyright © 2020 com.joonwon. All rights reserved.
-//
-
 import UIKit
 import Kingfisher
 import AVFoundation
+import Firebase
 
 class SearchViewController: UIViewController {
-
+    
+    let db = Database.database().reference().child("searchHistory")
+ 
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var resultCollectionView: UICollectionView!
     var movies: [Movie] = [] //mvvc패턴으로 구현하는게 낫다!
@@ -107,6 +103,9 @@ extension SearchViewController: UISearchBarDelegate {
             DispatchQueue.main.async {
                  self.movies = movies
                  self.resultCollectionView.reloadData() // resultCollectionView는 UI이기 때문에 Search가 아닌 메인 스레드에서 해야할 것
+                let timestamp = Date().timeIntervalSince1970.rounded()
+                //검색어 디비에  저장
+                self.db.childByAutoId().setValue(["term": searchTerm, "timestamp": timestamp])
             }
            
         }
