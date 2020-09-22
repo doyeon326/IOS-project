@@ -6,6 +6,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didRecieveFriendsNotification(_:)), name: DidReceiveFriendsNotification, object: nil)
         // Do any additional setup after loading the view.
     }
 }
@@ -36,8 +37,6 @@ extension ViewController: UITableViewDataSource{
             }
         }
     }
-           
-       
         return cell
     }
 }
@@ -45,31 +44,17 @@ extension ViewController: UITableViewDataSource{
 extension ViewController{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        requestFriends()
+    }
+    
+    @objc func didRecieveFriendsNotification(_ noti: Notification) {
+        guard let friends: [Friend] = noti.userInfo?["friends"] as? [Friend] else { return }
+        self.friends = friends
         
-        guard let url: URL = URL(string: "https://randomuser.me/api/?results=20&inc=name,email,picture") else { return }
-        
-        let session: URLSession = URLSession(configuration: .default)
-        let dataTask: URLSessionDataTask = session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            
-            guard let data = data else { return }
-            
-            do {
-                let apiResponse: APIResponse = try JSONDecoder().decode(APIResponse.self, from: data)
-                self.friends = apiResponse.results
-                
-                DispatchQueue.main.async {
-                     self.tableView.reloadData()
-                }
-               
-            } catch(let err){
-                print(err.localizedDescription)
-            }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
-        dataTask.resume()
+        
     }
 }
 

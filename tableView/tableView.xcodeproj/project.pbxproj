@@ -7,31 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EAC27ED425188653004CFC7D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC27ED325188653004CFC7D /* Request.swift */; };
-		EAF5A5B625174BB70073486C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF5A5B525174BB70073486C /* AppDelegate.swift */; };
-		EAF5A5B825174BB70073486C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF5A5B725174BB70073486C /* SceneDelegate.swift */; };
-		EAF5A5BA25174BB70073486C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF5A5B925174BB70073486C /* ViewController.swift */; };
-		EAF5A5BD25174BB70073486C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF5A5BB25174BB70073486C /* Main.storyboard */; };
-		EAF5A5BF25174BB80073486C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF5A5BE25174BB80073486C /* Assets.xcassets */; };
-		EAF5A5C225174BB80073486C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF5A5C025174BB80073486C /* LaunchScreen.storyboard */; };
-		EAF5A5CA25174CCD0073486C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF5A5C925174CCD0073486C /* Model.swift */; };
+		EAAB01EF2519DF70004BAE18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAB01EE2519DF70004BAE18 /* AppDelegate.swift */; };
+		EAAB01F12519DF70004BAE18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAB01F02519DF70004BAE18 /* SceneDelegate.swift */; };
+		EAAB01F32519DF70004BAE18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAB01F22519DF70004BAE18 /* ViewController.swift */; };
+		EAAB01F62519DF70004BAE18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAB01F42519DF70004BAE18 /* Main.storyboard */; };
+		EAAB01F82519DF75004BAE18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAAB01F72519DF75004BAE18 /* Assets.xcassets */; };
+		EAAB01FB2519DF75004BAE18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAB01F92519DF75004BAE18 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EAC27ED325188653004CFC7D /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		EAF5A5B225174BB70073486C /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAF5A5B525174BB70073486C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EAF5A5B725174BB70073486C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EAF5A5B925174BB70073486C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EAF5A5BC25174BB70073486C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EAF5A5BE25174BB80073486C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EAF5A5C125174BB80073486C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EAF5A5C325174BB80073486C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EAF5A5C925174CCD0073486C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EAAB01EB2519DF70004BAE18 /* tableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAAB01EE2519DF70004BAE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EAAB01F02519DF70004BAE18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EAAB01F22519DF70004BAE18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EAAB01F52519DF70004BAE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EAAB01F72519DF75004BAE18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAAB01FA2519DF75004BAE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EAAB01FC2519DF75004BAE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EAF5A5AF25174BB70073486C /* Frameworks */ = {
+		EAAB01E82519DF70004BAE18 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,74 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EAF5A5A925174BB70073486C = {
+		EAAB01E22519DF70004BAE18 = {
 			isa = PBXGroup;
 			children = (
-				EAF5A5B425174BB70073486C /* Networking */,
-				EAF5A5B325174BB70073486C /* Products */,
+				EAAB01ED2519DF70004BAE18 /* tableView */,
+				EAAB01EC2519DF70004BAE18 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EAF5A5B325174BB70073486C /* Products */ = {
+		EAAB01EC2519DF70004BAE18 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EAF5A5B225174BB70073486C /* Networking.app */,
+				EAAB01EB2519DF70004BAE18 /* tableView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EAF5A5B425174BB70073486C /* Networking */ = {
+		EAAB01ED2519DF70004BAE18 /* tableView */ = {
 			isa = PBXGroup;
 			children = (
-				EAF5A5B525174BB70073486C /* AppDelegate.swift */,
-				EAF5A5B725174BB70073486C /* SceneDelegate.swift */,
-				EAF5A5B925174BB70073486C /* ViewController.swift */,
-				EAC27ED325188653004CFC7D /* Request.swift */,
-				EAF5A5C925174CCD0073486C /* Model.swift */,
-				EAF5A5BB25174BB70073486C /* Main.storyboard */,
-				EAF5A5BE25174BB80073486C /* Assets.xcassets */,
-				EAF5A5C025174BB80073486C /* LaunchScreen.storyboard */,
-				EAF5A5C325174BB80073486C /* Info.plist */,
+				EAAB01EE2519DF70004BAE18 /* AppDelegate.swift */,
+				EAAB01F02519DF70004BAE18 /* SceneDelegate.swift */,
+				EAAB01F22519DF70004BAE18 /* ViewController.swift */,
+				EAAB01F42519DF70004BAE18 /* Main.storyboard */,
+				EAAB01F72519DF75004BAE18 /* Assets.xcassets */,
+				EAAB01F92519DF75004BAE18 /* LaunchScreen.storyboard */,
+				EAAB01FC2519DF75004BAE18 /* Info.plist */,
 			);
-			path = Networking;
+			path = tableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EAF5A5B125174BB70073486C /* Networking */ = {
+		EAAB01EA2519DF70004BAE18 /* tableView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EAF5A5C625174BB80073486C /* Build configuration list for PBXNativeTarget "Networking" */;
+			buildConfigurationList = EAAB01FF2519DF75004BAE18 /* Build configuration list for PBXNativeTarget "tableView" */;
 			buildPhases = (
-				EAF5A5AE25174BB70073486C /* Sources */,
-				EAF5A5AF25174BB70073486C /* Frameworks */,
-				EAF5A5B025174BB70073486C /* Resources */,
+				EAAB01E72519DF70004BAE18 /* Sources */,
+				EAAB01E82519DF70004BAE18 /* Frameworks */,
+				EAAB01E92519DF70004BAE18 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Networking;
-			productName = Networking;
-			productReference = EAF5A5B225174BB70073486C /* Networking.app */;
+			name = tableView;
+			productName = tableView;
+			productReference = EAAB01EB2519DF70004BAE18 /* tableView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EAF5A5AA25174BB70073486C /* Project object */ = {
+		EAAB01E32519DF70004BAE18 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
 				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = com.doyeon;
 				TargetAttributes = {
-					EAF5A5B125174BB70073486C = {
+					EAAB01EA2519DF70004BAE18 = {
 						CreatedOnToolsVersion = 11.7;
 					};
 				};
 			};
-			buildConfigurationList = EAF5A5AD25174BB70073486C /* Build configuration list for PBXProject "Networking" */;
+			buildConfigurationList = EAAB01E62519DF70004BAE18 /* Build configuration list for PBXProject "tableView" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,57 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = EAF5A5A925174BB70073486C;
-			productRefGroup = EAF5A5B325174BB70073486C /* Products */;
+			mainGroup = EAAB01E22519DF70004BAE18;
+			productRefGroup = EAAB01EC2519DF70004BAE18 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EAF5A5B125174BB70073486C /* Networking */,
+				EAAB01EA2519DF70004BAE18 /* tableView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EAF5A5B025174BB70073486C /* Resources */ = {
+		EAAB01E92519DF70004BAE18 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAF5A5C225174BB80073486C /* LaunchScreen.storyboard in Resources */,
-				EAF5A5BF25174BB80073486C /* Assets.xcassets in Resources */,
-				EAF5A5BD25174BB70073486C /* Main.storyboard in Resources */,
+				EAAB01FB2519DF75004BAE18 /* LaunchScreen.storyboard in Resources */,
+				EAAB01F82519DF75004BAE18 /* Assets.xcassets in Resources */,
+				EAAB01F62519DF70004BAE18 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EAF5A5AE25174BB70073486C /* Sources */ = {
+		EAAB01E72519DF70004BAE18 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAF5A5BA25174BB70073486C /* ViewController.swift in Sources */,
-				EAF5A5B625174BB70073486C /* AppDelegate.swift in Sources */,
-				EAC27ED425188653004CFC7D /* Request.swift in Sources */,
-				EAF5A5B825174BB70073486C /* SceneDelegate.swift in Sources */,
-				EAF5A5CA25174CCD0073486C /* Model.swift in Sources */,
+				EAAB01F32519DF70004BAE18 /* ViewController.swift in Sources */,
+				EAAB01EF2519DF70004BAE18 /* AppDelegate.swift in Sources */,
+				EAAB01F12519DF70004BAE18 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EAF5A5BB25174BB70073486C /* Main.storyboard */ = {
+		EAAB01F42519DF70004BAE18 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EAF5A5BC25174BB70073486C /* Base */,
+				EAAB01F52519DF70004BAE18 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		EAF5A5C025174BB80073486C /* LaunchScreen.storyboard */ = {
+		EAAB01F92519DF75004BAE18 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EAF5A5C125174BB80073486C /* Base */,
+				EAAB01FA2519DF75004BAE18 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -174,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		EAF5A5C425174BB80073486C /* Debug */ = {
+		EAAB01FD2519DF75004BAE18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -234,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		EAF5A5C525174BB80073486C /* Release */ = {
+		EAAB01FE2519DF75004BAE18 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -288,34 +280,34 @@
 			};
 			name = Release;
 		};
-		EAF5A5C725174BB80073486C /* Debug */ = {
+		EAAB02002519DF75004BAE18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Networking/Info.plist;
+				INFOPLIST_FILE = tableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.doyeon.Networking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.doyeon.tableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		EAF5A5C825174BB80073486C /* Release */ = {
+		EAAB02012519DF75004BAE18 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Networking/Info.plist;
+				INFOPLIST_FILE = tableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.doyeon.Networking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.doyeon.tableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -325,25 +317,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EAF5A5AD25174BB70073486C /* Build configuration list for PBXProject "Networking" */ = {
+		EAAB01E62519DF70004BAE18 /* Build configuration list for PBXProject "tableView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EAF5A5C425174BB80073486C /* Debug */,
-				EAF5A5C525174BB80073486C /* Release */,
+				EAAB01FD2519DF75004BAE18 /* Debug */,
+				EAAB01FE2519DF75004BAE18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EAF5A5C625174BB80073486C /* Build configuration list for PBXNativeTarget "Networking" */ = {
+		EAAB01FF2519DF75004BAE18 /* Build configuration list for PBXNativeTarget "tableView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EAF5A5C725174BB80073486C /* Debug */,
-				EAF5A5C825174BB80073486C /* Release */,
+				EAAB02002519DF75004BAE18 /* Debug */,
+				EAAB02012519DF75004BAE18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EAF5A5AA25174BB70073486C /* Project object */;
+	rootObject = EAAB01E32519DF70004BAE18 /* Project object */;
 }
