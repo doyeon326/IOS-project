@@ -10,21 +10,28 @@ import UIKit
 
 class MovieDetailViewController: UIViewController {
 
+    @IBOutlet var duration: UIView!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var movietitle: UILabel!
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var totalViewer: UILabel!
+    @IBOutlet weak var userRating: UILabel!
+    @IBOutlet weak var reservationRating: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
+//todo
+    //전 스토리보드에서 (term)을 받을것.
+    //받은 term 을 가지고 전에 만들었던 JsonParsing을 해서 관련 정보를 가져올것
+    //생각해야할것 마지막 뷰 (높이를 어떻게 설정해 줄건지?)
+    
+//implementation
+    //싱글톤을 써서 객체를 저장해서 쓸수 있도록 구현?
+    //viewmodel 만들기
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
