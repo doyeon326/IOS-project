@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var movies: [Movie] = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +26,13 @@ class ViewController: UIViewController {
                 print("몇개? \(movies.count), 첫번째 제목 \(movies.first?.title)")
                 DispatchQueue.main.async {
                     self.movies = movies
+                    self.tableView.reloadData()
                 }
         }
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
     }
@@ -37,7 +40,13 @@ extension ViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as? TableCell else {
             return UITableViewCell()
         }
-        cell.title.text = "안녕"
+        let movie = movies[indexPath.item]
+        let url = URL(string: movie.thumb)!
+        
+        cell.movieImage.kf.setImage(with: url)
+        cell.title.text = movies[indexPath.row].title
+        cell.date.text = "개봉일: \(movies[indexPath.row].date)"
+        cell.detail.text = "평점: \(movies[indexPath.row].userRating) 예매순위: \(movies[indexPath.row].reservationGrade) 예매율: \(movies[indexPath.row].reservationRate)"
         return cell
     }
 }
@@ -70,6 +79,8 @@ struct Movie: Codable {
         case thumb
         case reservationGrade = "reservation_grade"
     }
+    
+    
 }
 
 
