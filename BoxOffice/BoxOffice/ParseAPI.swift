@@ -9,7 +9,7 @@
 import Foundation
 
 class ParseAPI {
-    static func loadMovies(completion: @escaping ([Movie]) -> Void) {
+    static func loadMovies(completion: @escaping ([Movie]) -> Void) { //default인지, 순으로 받아야함
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
 
@@ -51,4 +51,6 @@ class ParseAPI {
             return []
         }
     }
+    
+    //SearchMoviesAPI도 만들어야함
 }

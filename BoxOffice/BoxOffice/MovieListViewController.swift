@@ -11,7 +11,7 @@ import Kingfisher
 
 class MovieListViewController: UIViewController {
 
-    var movies: [Movie] = [] //mvvc패턴으로 구현해야함
+    var movies: [Movie] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -30,6 +30,14 @@ class MovieListViewController: UIViewController {
                         }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as? MovieDetailViewController
+        if let indexPath = self.collectionView.indexPathsForSelectedItems {
+            let movieInfo = movies[indexPath.first!.item]
+                  vc?.viewModel.update(model: movieInfo)
+              }
+      }
 }
 
 

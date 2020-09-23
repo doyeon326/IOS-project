@@ -31,17 +31,13 @@ class ViewController: UIViewController {
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "movieDetail" {
-            //모델 넘기기 
+     
             let vc = segue.destination as? MovieDetailViewController
-            if let index = self.tableView.indexPathForSelectedRow as? Int {
-                let movieInfo = movies[index]
-                vc?.movietitle.text = movieInfo.title
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let movieInfo = movies[indexPath.row]
+                vc?.viewModel.update(model: movieInfo)
             }
-        }
     }
-    
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -64,7 +60,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       //  print("--->\(indexPath.row)")
-       // performSegue(withIdentifier:"movieDetail", sender: indexPath.row)
+       // performSegue( withIdentifier: "??", sender: indexPath.row)
     }
 }
 
@@ -100,10 +96,3 @@ struct Movie: Codable {
     
 }
 
-class DetailViewModel {
-    var MovieInfo: Movie?
-    
-    func update(model: Movie) {
-        MovieInfo = model
-    }
-}

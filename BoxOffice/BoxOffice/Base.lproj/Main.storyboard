@@ -213,10 +213,10 @@
             </objects>
             <point key="canvasLocation" x="1711.5942028985507" y="752.67857142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie Detail View Controller-->
         <scene sceneID="ZnF-qL-6Nr">
             <objects>
-                <viewController id="KlR-LA-gf1" sceneMemberID="viewController">
+                <viewController id="KlR-LA-gf1" customClass="MovieDetailViewController" customModule="BoxOffice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="56Z-iR-5hm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -236,7 +236,7 @@
                                                             <constraint firstAttribute="height" constant="300" id="uRx-4W-jK7"/>
                                                         </constraints>
                                                         <connections>
-                                                            <segue destination="z4e-zi-dEI" kind="embed" identifier="movieDetail" id="nKX-xn-WOF"/>
+                                                            <segue destination="z4e-zi-dEI" kind="embed" identifier="detail" id="nKX-xn-WOF"/>
                                                         </connections>
                                                     </containerView>
                                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7e7-HT-3N0">
@@ -245,7 +245,7 @@
                                                             <constraint firstAttribute="height" constant="200" id="9JI-sY-Cki"/>
                                                         </constraints>
                                                         <connections>
-                                                            <segue destination="Pdc-u1-Gi5" kind="embed" id="nBx-Li-TDQ"/>
+                                                            <segue destination="Pdc-u1-Gi5" kind="embed" identifier="summary" id="nBx-Li-TDQ"/>
                                                         </connections>
                                                     </containerView>
                                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ngu-Nc-Cb6">
@@ -254,7 +254,7 @@
                                                             <constraint firstAttribute="height" constant="150" id="vW8-MT-Y0q"/>
                                                         </constraints>
                                                         <connections>
-                                                            <segue destination="PFU-l5-vAj" kind="embed" id="HxU-wL-HI2"/>
+                                                            <segue destination="PFU-l5-vAj" kind="embed" identifier="cast" id="HxU-wL-HI2"/>
                                                         </connections>
                                                     </containerView>
                                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ib2-T5-3Bi">
@@ -263,7 +263,7 @@
                                                             <constraint firstAttribute="height" constant="150" id="4IU-ad-BKu"/>
                                                         </constraints>
                                                         <connections>
-                                                            <segue destination="9Zp-aw-raA" kind="embed" id="mrf-uJ-I1M"/>
+                                                            <segue destination="9Zp-aw-raA" kind="embed" identifier="review" id="mrf-uJ-I1M"/>
                                                         </connections>
                                                     </containerView>
                                                 </subviews>
@@ -359,10 +359,10 @@
             </objects>
             <point key="canvasLocation" x="1057" y="754"/>
         </scene>
-        <!--Movie Detail View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="doR-Mc-6mf">
             <objects>
-                <viewController id="z4e-zi-dEI" customClass="MovieDetailViewController" customModule="BoxOffice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="z4e-zi-dEI" customClass="DetailViewController" customModule="BoxOffice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9lO-KS-djT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -387,7 +387,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5위 2.37%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTI-iZ-AIw">
-                                <rect key="frame" x="41" y="260" width="56" height="14.5"/>
+                                <rect key="frame" x="31.5" y="263" width="56" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -429,20 +429,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="23i-zY-8mb" firstAttribute="centerY" secondItem="ULa-N2-sPE" secondAttribute="centerY" id="0pJ-xP-uS9"/>
                             <constraint firstItem="1LU-RV-aNG" firstAttribute="top" secondItem="6Oc-tz-Wfc" secondAttribute="bottom" constant="13" id="3ix-zH-2AT"/>
+                            <constraint firstItem="soL-o6-lw2" firstAttribute="centerY" secondItem="ULa-N2-sPE" secondAttribute="centerY" id="4pi-eE-mnD"/>
                             <constraint firstItem="soL-o6-lw2" firstAttribute="leading" secondItem="9lO-KS-djT" secondAttribute="leading" constant="40" id="61g-fi-N1u"/>
                             <constraint firstItem="IvK-Ah-cBx" firstAttribute="top" secondItem="9lO-KS-djT" secondAttribute="top" constant="7" id="8LV-cv-L9S"/>
                             <constraint firstItem="ULa-N2-sPE" firstAttribute="top" secondItem="fhF-Hw-cCI" secondAttribute="bottom" constant="56" id="Bfk-iG-nun"/>
                             <constraint firstItem="SVI-Qo-sr9" firstAttribute="centerX" secondItem="23i-zY-8mb" secondAttribute="centerX" id="GwW-oT-R1K"/>
                             <constraint firstItem="fhF-Hw-cCI" firstAttribute="top" secondItem="1LU-RV-aNG" secondAttribute="bottom" constant="18" id="H8N-AC-jfH"/>
-                            <constraint firstItem="ULa-N2-sPE" firstAttribute="leading" secondItem="soL-o6-lw2" secondAttribute="trailing" constant="96" id="J27-wu-wEN"/>
                             <constraint firstItem="fhF-Hw-cCI" firstAttribute="leading" secondItem="IvK-Ah-cBx" secondAttribute="trailing" constant="20" id="LDM-r2-raH"/>
                             <constraint firstItem="BTI-iZ-AIw" firstAttribute="centerX" secondItem="soL-o6-lw2" secondAttribute="centerX" id="MbK-TP-iDA"/>
                             <constraint firstAttribute="trailing" secondItem="23i-zY-8mb" secondAttribute="trailing" constant="40" id="Obg-W9-JVH"/>
-                            <constraint firstItem="soL-o6-lw2" firstAttribute="top" secondItem="ULa-N2-sPE" secondAttribute="bottom" constant="-21" id="Rpx-bw-w2P"/>
                             <constraint firstItem="SVI-Qo-sr9" firstAttribute="top" secondItem="23i-zY-8mb" secondAttribute="bottom" constant="10" id="V36-f6-Aex"/>
                             <constraint firstItem="BTI-iZ-AIw" firstAttribute="top" secondItem="soL-o6-lw2" secondAttribute="bottom" constant="10" id="Wnz-S6-fkC"/>
                             <constraint firstItem="6Oc-tz-Wfc" firstAttribute="leading" secondItem="IvK-Ah-cBx" secondAttribute="trailing" constant="20" id="Zby-kt-bnz"/>
@@ -453,15 +452,16 @@
                             <constraint firstItem="DhA-kO-NDA" firstAttribute="top" secondItem="ULa-N2-sPE" secondAttribute="bottom" constant="10" id="xqG-5W-2sn"/>
                             <constraint firstItem="ULa-N2-sPE" firstAttribute="centerX" secondItem="9lO-KS-djT" secondAttribute="centerX" id="zkU-WX-PZF"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="cP5-zf-hev"/>
                     </view>
                     <connections>
-                        <outlet property="date" destination="1LU-RV-aNG" id="c9Q-Ja-YkL"/>
-                        <outlet property="duration" destination="fhF-Hw-cCI" id="o0O-fG-9cN"/>
-                        <outlet property="image" destination="IvK-Ah-cBx" id="TvJ-SS-gJV"/>
-                        <outlet property="movietitle" destination="6Oc-tz-Wfc" id="a9z-HE-gPX"/>
-                        <outlet property="reservationRating" destination="BTI-iZ-AIw" id="2V0-G9-1cT"/>
-                        <outlet property="totalViewer" destination="SVI-Qo-sr9" id="Vp4-4R-pTu"/>
-                        <outlet property="userRating" destination="DhA-kO-NDA" id="3wi-tA-OrW"/>
+                        <outlet property="date" destination="1LU-RV-aNG" id="L4A-ps-vp3"/>
+                        <outlet property="duration" destination="fhF-Hw-cCI" id="8Is-42-99Y"/>
+                        <outlet property="image" destination="IvK-Ah-cBx" id="kTA-aL-udm"/>
+                        <outlet property="movieTitle" destination="6Oc-tz-Wfc" id="ssy-1P-4h1"/>
+                        <outlet property="rank" destination="BTI-iZ-AIw" id="cDA-G6-SjN"/>
+                        <outlet property="rate" destination="DhA-kO-NDA" id="n7d-wp-tD3"/>
+                        <outlet property="totalViewer" destination="SVI-Qo-sr9" id="heS-er-CDY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2q-Q4-gLh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -563,7 +563,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cx6-1m-Z3Y"/>
+        <segue reference="oHS-WP-wFh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
