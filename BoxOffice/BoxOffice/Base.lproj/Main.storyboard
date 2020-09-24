@@ -107,7 +107,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="타이틀" id="5nY-tj-J9X">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="UgQ-qp-Zud"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="UgQ-qp-Zud">
+                            <connections>
+                                <action selector="sortOptionButton:" destination="BYZ-38-t0r" id="9sq-rT-nbx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="62d-TT-jUz" id="It5-tA-AJt"/>
@@ -204,7 +208,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pxx-wE-xlI"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Jog-Qn-8io"/>
+                    <navigationItem key="navigationItem" id="Jog-Qn-8io">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="mtC-cA-NXe">
+                            <connections>
+                                <action selector="sortType:" destination="t3f-cV-Dof" id="6Yv-ba-gZD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="nxd-av-O5U" id="dIW-QG-fHm"/>
                     </connections>

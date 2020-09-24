@@ -9,11 +9,15 @@
 import Foundation
 
 class ParseAPI {
-    static func loadMovies(completion: @escaping ([Movie]) -> Void) { //default인지, 순으로 받아야함
+    static func loadMovies(_ typeStatus: Int, completion: @escaping ([Movie]) -> Void) { //default인지, 순으로 받아야함, //update를 하고 fetch 로 받아야함
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
-
-        var urlComponents = URLComponents(string: "http://connect-boxoffice.run.goorm.io/movies")!
+        
+      //  let movieType = MovieType()
+       // var type = movieType.fetchType()
+        print("--->movie type: \(typeStatus)")
+        var str = "http://connect-boxoffice.run.goorm.io/movies?order_type=\(typeStatus)"
+        var urlComponents = URLComponents(string: str)!
         let requestURL = urlComponents.url!
         
        let dataTask = session.dataTask(with: requestURL) { (data, response, error) in
@@ -54,3 +58,4 @@ class ParseAPI {
     
     //SearchMoviesAPI도 만들어야함
 }
+
