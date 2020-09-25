@@ -12,7 +12,7 @@ import Kingfisher
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var movies: [Movie] = []
-    let movieType = MovieType()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,7 @@ class ViewController: UIViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let movieInfo = movies[indexPath.row]
                 vc?.viewModel.update(model: movieInfo)
+                vc?.id = movieInfo.id
             }
     }
 }
@@ -91,7 +92,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func fetchMovies(){
-        
         ParseAPI.loadMovies(MovieType.shared.fetchType()) { movies in
         DispatchQueue.main.async {
                 self.movies = movies
@@ -100,9 +100,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
 }
-
-
-
 
 class TableCell: UITableViewCell {
     @IBOutlet weak var movieImage: UIImageView!
@@ -124,6 +121,7 @@ struct Movie: Codable {
     let reservationRate: Double
     let thumb: String
     let reservationGrade: Int
+    let id: String
     
     enum CodingKeys: String, CodingKey{
         case date
@@ -132,8 +130,11 @@ struct Movie: Codable {
         case reservationRate = "reservation_rate"
         case thumb
         case reservationGrade = "reservation_grade"
+        case id
     }
 }
+
+
 
 class MovieType {
     static let shared: MovieType = MovieType()
