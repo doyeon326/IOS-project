@@ -17,8 +17,6 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func hamburgerBtnTapped(_ sender: Any) {
@@ -39,7 +37,24 @@ class MainViewController: UIViewController {
         }
     
     }
+}
+
+extension MainViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodoListCell", for: indexPath) as? TodoListCell else { return UICollectionViewCell() }
+        return cell
+    }
+    
+    
+}
 
-
+class TodoListCell: UICollectionViewCell {
+    
 }
