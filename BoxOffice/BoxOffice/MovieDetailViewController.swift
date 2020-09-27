@@ -43,7 +43,8 @@ class DetailViewModel { //싱글톤 필요!
     }
 }
 
-struct MovieInfo: Codable { // 클래스화해서 제이슨 파싱해서 들고있고 값뿌려줘야함 
+
+struct MovieInfo: Codable { // 클래스화해서 제이슨 파싱해서 들고있고 값뿌려줘야함 ! 
     let image: String
     let duration: Int
     let date: String
