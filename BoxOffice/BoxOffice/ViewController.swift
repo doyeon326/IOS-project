@@ -28,6 +28,8 @@ class ViewController: UIViewController {
                 let movieInfo = movies[indexPath.row]
                 vc?.viewModel.update(model: movieInfo)
                 vc?.id = movieInfo.id
+                MovieDetailInfo.shared.movieTitle = movieInfo.title
+                
             }
     }
 }

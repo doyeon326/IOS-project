@@ -16,6 +16,8 @@ class MovieDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        MovieDetailInfo.shared.fetchMovieInfo()
+        print("------>\(MovieDetailInfo.shared.movieTitle)")
         updateUI()
     }
     
@@ -77,3 +79,38 @@ struct MovieInfo: Codable { // 클래스화해서 제이슨 파싱해서 들고�
             case title
     }
 }
+
+
+class MovieDetailInfo {
+    static let shared = MovieDetailInfo()
+    var movieTitle: String = ""
+    var movieInfo: MovieInfo?
+    
+    func update(title: String){
+        self.movieTitle = title
+    }
+    
+    func fetchMovieInfo(){
+        SearchAPI.search(movieTitle) { movie in
+            DispatchQueue.main.async {
+                self.movieInfo = movie
+                print("\(self.movieInfo?.director)")
+            
+            }
+            
+        }
+    }
+}
+
+
+/*
+ func fetchMovies(){
+     ParseAPI.loadMovies(MovieType.shared.fetchType()) { movies in
+     DispatchQueue.main.async {
+             self.movies = movies
+             self.tableView.reloadData()
+     }
+     }
+ }
+ 
+ */
