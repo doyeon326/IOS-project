@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         fetchMovies()
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let vc = segue.destination as? MovieDetailViewController
             if let indexPath = self.tableView.indexPathForSelectedRow {
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
                 vc?.viewModel.update(model: movieInfo)
                 vc?.id = movieInfo.id
                 MovieDetailInfo.shared.movieTitle = movieInfo.title
-                
+                MovieDetailInfo.shared.movieId = movieInfo.id
             }
     }
 }
@@ -52,6 +53,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.title.text = movies[indexPath.row].title
         cell.date.text = "개봉일: \(movies[indexPath.row].date)"
         cell.detail.text = "평점: \(movies[indexPath.row].userRating) 예매순위: \(movies[indexPath.row].reservationGrade) 예매율: \(movies[indexPath.row].reservationRate)"
+       
         return cell
     }
     
@@ -61,10 +63,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     @IBAction func sortOptionButton(_ sender: Any) {
-        
         showAlertController()
-        
     }
+    
     func showAlertController(){
         let alertController: UIAlertController
         alertController = UIAlertController(title: "Title", message: "message", preferredStyle: .actionSheet)
@@ -108,6 +109,7 @@ class TableCell: UITableViewCell {
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var detail: UILabel!
     @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var availableAge: UILabel!
     //circle & label color need to be change
 
 }
@@ -124,6 +126,7 @@ struct Movie: Codable {
     let thumb: String
     let reservationGrade: Int
     let id: String
+    let grade: Int
     
     enum CodingKeys: String, CodingKey{
         case date
@@ -133,6 +136,7 @@ struct Movie: Codable {
         case thumb
         case reservationGrade = "reservation_grade"
         case id
+        case grade
     }
 }
 

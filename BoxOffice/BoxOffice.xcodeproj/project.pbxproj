@@ -75,13 +75,13 @@
 			isa = PBXGroup;
 			children = (
 				EAAE5CD1251B3F37004A43A5 /* DetailViews */,
-				EA77F3382519FAE500765BB9 /* MovieListViewController.swift */,
-				EA6ED0EA25191BB100A7F2D2 /* ParseAPI.swift */,
 				EAC27EE1251888BC004CFC7D /* AppDelegate.swift */,
 				EAC27EE3251888BC004CFC7D /* SceneDelegate.swift */,
+				EA6ED0EA25191BB100A7F2D2 /* ParseAPI.swift */,
+				EA77F3382519FAE500765BB9 /* MovieListViewController.swift */,
 				EAC27EE5251888BC004CFC7D /* ViewController.swift */,
-				EAC27EE7251888BC004CFC7D /* Main.storyboard */,
 				EA77F33D251A5FDC00765BB9 /* MovieDetailViewController.swift */,
+				EAC27EE7251888BC004CFC7D /* Main.storyboard */,
 				EAC27EEA251888BE004CFC7D /* Assets.xcassets */,
 				EAC27EEC251888BE004CFC7D /* LaunchScreen.storyboard */,
 				EAC27EEF251888BE004CFC7D /* Info.plist */,

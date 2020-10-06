@@ -13,7 +13,7 @@ class DetailViewController: UIViewController {
     //아이디 번호만 넘겨주면 아이디 번호로 다시 키vs밸류 조회후 값받음 ㅎ
     
     var viewModel = DetailViewModel()
-
+    var movieInfo = MovieDetailInfo()
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
@@ -28,6 +28,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
          super.viewDidLoad()
          updateUI()
+        print("----> wpqkf... anj,,,,skdhk ...\(movieInfo.movieInfo?.actor)")
+      
      }
 
 
@@ -42,7 +44,8 @@ extension DetailViewController {
         movieTitle.text = movie?.title
         date.text = "\(movie?.date) 개봉"
         
+          print("제목:\(MovieDetailInfo.shared.movieInfo?.title) 감독: \(MovieDetailInfo.shared.movieInfo?.audience)")
         
-        
+        print("-----> 여기당 \(MovieDetailInfo.shared.movieTitle)")
     }
 }

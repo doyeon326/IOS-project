@@ -56,6 +56,7 @@ class ParseAPI {
 
 class SearchAPI {
     static func search(_ id: String, completion: @escaping (MovieInfo) -> Void) {
+        print("\(id) is successfully in")
         let session = URLSession(configuration: .default)
         var urlComponents = URLComponents(string: "http://connect-boxoffice.run.goorm.io/movie?")!
         let idQuery = URLQueryItem(name: "id", value: id)

@@ -10,15 +10,19 @@ import UIKit
 
 class MovieDetailViewController: UIViewController {
 
+    
+    @IBOutlet weak var detail: UIView!
+    
+    
     var viewModel = DetailViewModel()//id만 넘겨받으면 되긴함,,
     var id: String = ""
-    
+    var movieInfo: MovieInfo?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        MovieDetailInfo.shared.fetchMovieInfo()
-        print("------>\(MovieDetailInfo.shared.movieTitle)")
-        updateUI()
+        fetchMovieInfo()
+       
+ 
     }
     
     func updateUI(){
@@ -28,12 +32,30 @@ class MovieDetailViewController: UIViewController {
         }
     }
     
+    func fetchMovieInfo(){
+        SearchAPI.search(id) { movie in
+            DispatchQueue.main.async {
+                
+                self.movieInfo = movie
+            
+                print("----> director: \(self.movieInfo?.director), \(self.movieInfo?.audience)")
+                MovieDetailInfo.shared.movieInfo = movie
+                self.updateUI()
+            }
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detail" {
+            print("prepare func")
             let vc = segue.destination as? DetailViewController
             vc?.viewModel = self.viewModel
+            vc?.movieInfo.movieInfo = self.movieInfo
         }
-        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("---끝나기전\(movieInfo?.actor)")
     }
 }
 
@@ -82,35 +104,22 @@ struct MovieInfo: Codable { // 클래스화해서 제이슨 파싱해서 들고�
 
 
 class MovieDetailInfo {
-    static let shared = MovieDetailInfo()
+    static let shared: MovieDetailInfo = MovieDetailInfo()
     var movieTitle: String = ""
     var movieInfo: MovieInfo?
+    var movieId : String = ""
+    var actor: String = ""
+
     
-    func update(title: String){
-        self.movieTitle = title
+    func updateMovieInfo(movieInfod: MovieInfo){
+        print(movieInfod.actor)
+        self.actor = movieInfod.actor
+        self.movieInfo = movieInfod
+        print(movieTitle)
+    }
+    func fetchActor() -> String{
+        return actor
     }
     
-    func fetchMovieInfo(){
-        SearchAPI.search(movieTitle) { movie in
-            DispatchQueue.main.async {
-                self.movieInfo = movie
-                print("\(self.movieInfo?.director)")
-            
-            }
-            
-        }
-    }
+
 }
-
-
-/*
- func fetchMovies(){
-     ParseAPI.loadMovies(MovieType.shared.fetchType()) { movies in
-     DispatchQueue.main.async {
-             self.movies = movies
-             self.tableView.reloadData()
-     }
-     }
- }
- 
- */

@@ -83,6 +83,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="availableAge" destination="TYF-qJ-bnV" id="Omu-U7-yM0"/>
                                             <outlet property="date" destination="xdh-ez-JlW" id="qMw-oM-avG"/>
                                             <outlet property="detail" destination="No4-je-XKy" id="k2I-Xk-8UK"/>
                                             <outlet property="movieImage" destination="HAB-1E-iRe" id="X4t-Mn-hkp"/>
@@ -307,6 +308,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="pEH-QQ-jFY"/>
                     <size key="freeformSize" width="414" height="1600"/>
+                    <connections>
+                        <outlet property="detail" destination="CZW-Ub-J9B" id="6Q6-v6-GUr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3bm-K7-c1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -562,6 +566,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijv-NP-N6N">
+                                <rect key="frame" x="251" y="44" width="21" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="square.and.pencil" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7Gc-cH-DgE" kind="presentation" modalPresentationStyle="fullScreen" id="acv-fA-O8o"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ynL-JZ-xFQ"/>
@@ -569,11 +584,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbc-Q6-eq9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3875" y="617"/>
+            <point key="canvasLocation" x="3873.913043478261" y="616.74107142857144"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nPk-UO-Uzn">
+            <objects>
+                <viewController id="7Gc-cH-DgE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3vE-ZX-FRh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ciS-Lf-RC2"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="800"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KmT-sp-9zX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4648" y="597"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oHS-WP-wFh"/>
+        <segue reference="cx6-1m-Z3Y"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
@@ -581,6 +612,7 @@
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="118"/>
         <image name="table" catalog="system" width="128" height="93"/>
     </resources>
 </document>
