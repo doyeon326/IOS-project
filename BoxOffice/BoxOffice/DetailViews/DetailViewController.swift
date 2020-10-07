@@ -10,7 +10,8 @@ import UIKit
 import Kingfisher
 
 class DetailViewController: UIViewController {
-  
+    //테이블뷰로 바꿔야함
+    //고민해봐야할것. 1. 컨텐츠의 따른 셀크기
     var movieInfo = MovieDetailInfo()
     
     @IBOutlet weak var image: UIImageView!
@@ -21,6 +22,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var rate: UILabel!
     @IBOutlet weak var totalViewer: UILabel!
 
+    @IBOutlet weak var summary: UILabel!
+    @IBOutlet weak var director: UILabel!
     
     override func viewDidLoad() {
          super.viewDidLoad()
@@ -54,7 +57,8 @@ extension DetailViewController {
         totalViewer.text = "\(movie.audience)"
         rate.text = "\(movie.userRating)"
         rank.text = "\(movie.reservationGrade)위 \(movie.reservationRate)%"
-
+        summary.text = movie.synopsis
+        director.text = "\(movie.actor)/\(movie.director)"
     }
     
     
