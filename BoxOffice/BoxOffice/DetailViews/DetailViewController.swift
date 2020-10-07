@@ -10,9 +10,7 @@ import UIKit
 import Kingfisher
 
 class DetailViewController: UIViewController {
-    //아이디 번호만 넘겨주면 아이디 번호로 다시 키vs밸류 조회후 값받음 ㅎ
-    
-    var viewModel = DetailViewModel()
+  
     var movieInfo = MovieDetailInfo()
     
     @IBOutlet weak var image: UIImageView!
@@ -22,30 +20,42 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var rank: UILabel!
     @IBOutlet weak var rate: UILabel!
     @IBOutlet weak var totalViewer: UILabel!
- 
 
     
     override func viewDidLoad() {
          super.viewDidLoad()
-         updateUI()
-        print("----> wpqkf... anj,,,,skdhk ...\(movieInfo.movieInfo?.actor)")
-      
+
      }
 
-
+    override func viewDidAppear(_ animated: Bool) {
+        fetchMovieInfo()
+    }
+    
+    func fetchMovieInfo(){
+        SearchAPI.search(MovieDetailInfo.shared.movieId) { movie in
+                   DispatchQueue.main.async {
+                    self.movieInfo.movieInfo = movie
+                    self.updateUI()
+                    self.view.setNeedsLayout()
+                   }
+        }
+    }
 }
 
 extension DetailViewController {
     func updateUI(){
-        let movie = viewModel.MovieInfo
+        let movie = movieInfo.movieInfo!
         
-        let url = URL(string: movie!.thumb)
+        let url = URL(string: movie.image)
         image.kf.setImage(with: url)
-        movieTitle.text = movie?.title
-        date.text = "\(movie?.date) 개봉"
-        
-          print("제목:\(MovieDetailInfo.shared.movieInfo?.title) 감독: \(MovieDetailInfo.shared.movieInfo?.audience)")
-        
-        print("-----> 여기당 \(MovieDetailInfo.shared.movieTitle)")
+        movieTitle.text = movie.title
+        date.text = "\(movie.date)개봉"
+        duration.text = "\(movie.genre)/\(movie.duration)분"
+        totalViewer.text = "\(movie.audience)"
+        rate.text = "\(movie.userRating)"
+        rank.text = "\(movie.reservationGrade)위 \(movie.reservationRate)%"
+
     }
+    
+    
 }

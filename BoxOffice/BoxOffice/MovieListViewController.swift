@@ -40,7 +40,7 @@ class MovieListViewController: UIViewController {
         let vc = segue.destination as? MovieDetailViewController
         if let indexPath = self.collectionView.indexPathsForSelectedItems {
             let movieInfo = movies[indexPath.first!.item]
-                  vc?.viewModel.update(model: movieInfo)
+                //  vc?.viewModel.update(model: movieInfo)
               }
       }
 }
@@ -60,12 +60,6 @@ extension MovieListViewController: UICollectionViewDataSource {
         cell.rank.text = "\(movie.reservationGrade)위(\(movie.userRating))/ \(movie.reservationRate)%"
         cell.title.text = movie.title
         return cell
-    }
-}
-
-extension MovieListViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //눌렀을때
     }
 }
 

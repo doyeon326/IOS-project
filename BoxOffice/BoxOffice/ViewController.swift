@@ -27,9 +27,7 @@ class ViewController: UIViewController {
             let vc = segue.destination as? MovieDetailViewController
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let movieInfo = movies[indexPath.row]
-                vc?.viewModel.update(model: movieInfo)
-                vc?.id = movieInfo.id
-                MovieDetailInfo.shared.movieTitle = movieInfo.title
+        
                 MovieDetailInfo.shared.movieId = movieInfo.id
             }
     }
@@ -99,6 +97,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         DispatchQueue.main.async {
                 self.movies = movies
                 self.tableView.reloadData()
+            
         }
         }
     }

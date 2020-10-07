@@ -12,59 +12,27 @@ class MovieDetailViewController: UIViewController {
 
     
     @IBOutlet weak var detail: UIView!
+    var detailViewController : DetailViewController!
     
-    
-    var viewModel = DetailViewModel()//id만 넘겨받으면 되긴함,,
-    var id: String = ""
+
     var movieInfo: MovieInfo?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchMovieInfo()
+
        
  
     }
     
-    func updateUI(){
-        if let movieInfo = viewModel.MovieInfo {
-            print("\(movieInfo.title)")
-            print("\(id)")
-        }
-    }
-    
-    func fetchMovieInfo(){
-        SearchAPI.search(id) { movie in
-            DispatchQueue.main.async {
-                
-                self.movieInfo = movie
-            
-                print("----> director: \(self.movieInfo?.director), \(self.movieInfo?.audience)")
-                MovieDetailInfo.shared.movieInfo = movie
-                self.updateUI()
-            }
-        }
-    }
+
+  
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detail" {
-            print("prepare func")
-            let vc = segue.destination as? DetailViewController
-            vc?.viewModel = self.viewModel
-            vc?.movieInfo.movieInfo = self.movieInfo
+
         }
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        print("---끝나기전\(movieInfo?.actor)")
-    }
-}
-
-class DetailViewModel { //싱글톤 필요!
-    var MovieInfo: Movie?
-    
-    func update(model: Movie) {
-        MovieInfo = model
-    }
 }
 
 
@@ -105,21 +73,7 @@ struct MovieInfo: Codable { // 클래스화해서 제이슨 파싱해서 들고�
 
 class MovieDetailInfo {
     static let shared: MovieDetailInfo = MovieDetailInfo()
-    var movieTitle: String = ""
     var movieInfo: MovieInfo?
     var movieId : String = ""
-    var actor: String = ""
-
-    
-    func updateMovieInfo(movieInfod: MovieInfo){
-        print(movieInfod.actor)
-        self.actor = movieInfod.actor
-        self.movieInfo = movieInfod
-        print(movieTitle)
-    }
-    func fetchActor() -> String{
-        return actor
-    }
-    
 
 }
