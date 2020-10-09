@@ -62,6 +62,9 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.7.2):
     - GoogleUtilities/Logger
+  - Kingfisher (5.15.5):
+    - Kingfisher/Core (= 5.15.5)
+  - Kingfisher/Core (5.15.5)
   - leveldb-library (1.22)
   - nanopb (1.30906.0):
     - nanopb/decode (= 1.30906.0)
@@ -73,6 +76,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Database
+  - Kingfisher (~> 5.0)
 
 SPEC REPOS:
   trunk:
@@ -85,6 +89,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
+    - Kingfisher
     - leveldb-library
     - nanopb
     - PromisesObjC
@@ -99,10 +104,11 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 1a66f478c68ecd6c16ee63ee60c7c3a648e6b337
   GoogleDataTransport: e85fb700c9b027079ce182c3d08e12e0f9618bb4
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
+  Kingfisher: e3ec347a5ab8817b7585ef46923a2d2b9a7d8fbe
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
 
-PODFILE CHECKSUM: 9619468bcba684b940a69f8c85f6288e893e26d6
+PODFILE CHECKSUM: 26af2b197ad7a4582e903471c8b8603464bbdaab
 
 COCOAPODS: 1.9.3

@@ -18,6 +18,7 @@
 		EAC27EE9251888BC004CFC7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC27EE7251888BC004CFC7D /* Main.storyboard */; };
 		EAC27EEB251888BE004CFC7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAC27EEA251888BE004CFC7D /* Assets.xcassets */; };
 		EAC27EEE251888BE004CFC7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC27EEC251888BE004CFC7D /* LaunchScreen.storyboard */; };
+		EAEEE60D252EE90200311CCC /* MovieInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEEE60C252EE90200311CCC /* MovieInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		EAC27EEA251888BE004CFC7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAC27EED251888BE004CFC7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAC27EEF251888BE004CFC7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAEEE60C252EE90200311CCC /* MovieInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieInfoViewController.swift; path = ../MovieInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				EA77F3382519FAE500765BB9 /* MovieListViewController.swift */,
 				EAC27EE5251888BC004CFC7D /* ViewController.swift */,
 				EA77F33D251A5FDC00765BB9 /* MovieDetailViewController.swift */,
+				EAEEE60C252EE90200311CCC /* MovieInfoViewController.swift */,
 				EAC27EE7251888BC004CFC7D /* Main.storyboard */,
 				EAC27EEA251888BE004CFC7D /* Assets.xcassets */,
 				EAC27EEC251888BE004CFC7D /* LaunchScreen.storyboard */,
@@ -169,6 +172,7 @@
 				EAC27EE6251888BC004CFC7D /* ViewController.swift in Sources */,
 				EA77F3392519FAE500765BB9 /* MovieListViewController.swift in Sources */,
 				EAC27EE2251888BC004CFC7D /* AppDelegate.swift in Sources */,
+				EAEEE60D252EE90200311CCC /* MovieInfoViewController.swift in Sources */,
 				EA6ED0EB25191BB100A7F2D2 /* ParseAPI.swift in Sources */,
 				EA77F33E251A5FDC00765BB9 /* MovieDetailViewController.swift in Sources */,
 				EAC27EE4251888BC004CFC7D /* SceneDelegate.swift in Sources */,

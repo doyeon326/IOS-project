@@ -12,8 +12,7 @@ class ParseAPI {
     static func loadMovies(_ typeStatus: Int, completion: @escaping ([Movie]) -> Void) {
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
-        
-        print("--->movie type: \(typeStatus)")
+    
         var str = "http://connect-boxoffice.run.goorm.io/movies?order_type=\(typeStatus)"
         var urlComponents = URLComponents(string: str)!
         let requestURL = urlComponents.url!
@@ -50,8 +49,6 @@ class ParseAPI {
             return []
         }
     }
-    
-    //SearchMoviesAPI도 만들어야함
 }
 
 class SearchAPI {
@@ -83,7 +80,6 @@ class SearchAPI {
     
     static func parseMovieInfo(_ data: Data) -> MovieInfo? {
         let decoder = JSONDecoder()
-     //   var movieInfo: MovieInfo
         do{
             let response = try decoder.decode(MovieInfo.self, from: data)
             let movieInfo = response
