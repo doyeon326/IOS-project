@@ -52,6 +52,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.date.text = "개봉일: \(movies[indexPath.row].date)"
         cell.detail.text = "평점: \(movies[indexPath.row].userRating) 예매순위: \(movies[indexPath.row].reservationGrade) 예매율: \(movies[indexPath.row].reservationRate)"
        
+        switch movies[indexPath.row].grade {
+        case 12:
+            cell.circle.tintColor = .systemTeal
+        case 15: cell.circle.tintColor = .systemOrange
+        case 19: cell.circle.tintColor = .systemPink
+        default:
+            cell.circle.tintColor = .systemGreen
+        }
+        cell.availableAge.text = "\(movies[indexPath.row].grade)"
+        
         return cell
     }
     
@@ -66,9 +76,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func showAlertController(){
         let alertController: UIAlertController
-        alertController = UIAlertController(title: "Title", message: "message", preferredStyle: .actionSheet)
+        alertController = UIAlertController(title: "정렬방식 선택", message: "영화를 어떤 순서로 정렬할까요?", preferredStyle: .actionSheet)
         
-        let sortByRate = UIAlertAction(title: "예매율", style: UIAlertAction.Style.destructive, handler: {action in
+        let sortByRate = UIAlertAction(title: "예매율", style: UIAlertAction.Style.default, handler: {action in
             MovieType.shared.updateType(0)
             self.fetchMovies()
         })
@@ -76,12 +86,14 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let sortByQue = UIAlertAction(title: "큐레이션", style: UIAlertAction.Style.default, handler: {action in
             MovieType.shared.updateType(1)
             self.fetchMovies()
+      
         })
         let sortByDate = UIAlertAction(title: "개봉일", style: UIAlertAction.Style.default, handler: {action in
             MovieType.shared.updateType(2)
             self.fetchMovies()
+   
         })
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil) //.cancel
                 
               alertController.addAction(sortByRate)
               alertController.addAction(sortByQue)
@@ -96,11 +108,23 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         ParseAPI.loadMovies(MovieType.shared.fetchType()) { movies in
         DispatchQueue.main.async {
                 self.movies = movies
+            
+            switch MovieType.shared.fetchType(){ //밖으로빼서 해주면 좋을듯
+            case 0: self.navigationItem.title = "예매율순"
+            case 1: self.navigationItem.title = "큐레이션순"
+            case 2: self.navigationItem.title = "개봉일순"
+                
+            default:
+                self.navigationItem.title = "예매율순"
+            }
+            
                 self.tableView.reloadData()
             
         }
         }
     }
+    
+    
 }
 
 class TableCell: UITableViewCell {
@@ -111,6 +135,8 @@ class TableCell: UITableViewCell {
     @IBOutlet weak var availableAge: UILabel!
     //circle & label color need to be change
 
+    @IBOutlet weak var grade: UILabel!
+    @IBOutlet weak var circle: UIImageView!
 }
 
 struct Response: Codable {

@@ -1,11 +1,3 @@
-//
-//  ParseAPI.swift
-//  BoxOffice
-//
-//  Created by Tony Jung on 2020/09/22.
-//  Copyright © 2020 com.doyeon. All rights reserved.
-//
-
 import Foundation
 
 class ParseAPI {

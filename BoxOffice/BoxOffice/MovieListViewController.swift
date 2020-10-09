@@ -22,6 +22,7 @@ class MovieListViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        //task : 싱글톤으로 불러온 데이터를 쉐어하기.. 
         ParseAPI.loadMovies(MovieType.shared.fetchType()) { movies in
              print("몇개? \(movies.count), 첫번째 제목 \(movies.first?.title)")
             DispatchQueue.main.async {
@@ -34,7 +35,7 @@ class MovieListViewController: UIViewController {
     }
     
     @IBAction func sortType(_ sender: Any) {
-
+        //값만 받아서 present 해주기 ..
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as? MovieDetailViewController
