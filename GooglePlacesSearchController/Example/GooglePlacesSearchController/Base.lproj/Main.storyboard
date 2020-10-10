@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rBc-d4-ezF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GooglePlacesSearchController_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfl-5k-VNu">
+                                <rect key="frame" x="192" y="437.5" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYh-3W-185">
+                                <rect key="frame" x="129" y="497" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="말하기!!!!"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B4N-pV-zJZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18v-7Y-Ceh">
+                                <rect key="frame" x="51" y="497" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="지도보기"/>
+                                <connections>
+                                    <segue destination="dzC-2a-jLD" kind="show" id="h5n-Vd-Spe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MO-Dx-aAb">
+                                <rect key="frame" x="208" y="497" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="택시부르기"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="esm-UQ-ath"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vp-Ok-uVr">
+                                <rect key="frame" x="292" y="497" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="근처식당보기"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XBJ-mz-udh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rfl-5k-VNu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Grc-Uc-Tte"/>
+                            <constraint firstItem="rfl-5k-VNu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o5B-8M-Bbg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Ux-xq-e2r">
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="wCg-0H-jb8">
+                            <connections>
+                                <action selector="searchAddress:" destination="BYZ-38-t0r" id="xO5-zu-Z7o"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="address" destination="rfl-5k-VNu" id="Thp-f6-GiT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018.840579710145" y="1078.7946428571429"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="ZzI-Lg-ILa">
+            <objects>
+                <viewController id="dzC-2a-jLD" customClass="MapViewController" customModule="GooglePlacesSearchController_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YNH-GQ-Se7"/>
+                        <viewControllerLayoutGuide type="bottom" id="aJb-HQ-nON"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pgh-cg-Tz1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Npu-v3-0y4" customClass="GMSMapView">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mappin" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="faQ-IZ-spR">
+                                <rect key="frame" x="179" y="424" width="55" height="47"/>
+                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="default"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aJb-HQ-nON" firstAttribute="top" secondItem="Npu-v3-0y4" secondAttribute="bottom" id="6Md-MZ-pSe"/>
+                            <constraint firstItem="Npu-v3-0y4" firstAttribute="leading" secondItem="pgh-cg-Tz1" secondAttribute="leadingMargin" id="FzX-4b-my1"/>
+                            <constraint firstItem="faQ-IZ-spR" firstAttribute="centerX" secondItem="Npu-v3-0y4" secondAttribute="centerX" id="SCg-jH-z8p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Npu-v3-0y4" secondAttribute="trailing" id="YcR-sS-vZf"/>
+                            <constraint firstItem="Npu-v3-0y4" firstAttribute="top" secondItem="YNH-GQ-Se7" secondAttribute="bottom" id="oOF-pq-cF8"/>
+                            <constraint firstItem="faQ-IZ-spR" firstAttribute="centerY" secondItem="Npu-v3-0y4" secondAttribute="centerY" id="ybr-a5-ove"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Eq6-si-nGo"/>
+                    <connections>
+                        <outlet property="mapView" destination="Npu-v3-0y4" id="P01-bz-Ll3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UmF-qU-x8Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1759.4202898550725" y="1074.7767857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pNw-C3-plh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rBc-d4-ezF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O9Q-4B-WsD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5Sc-JF-wdx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kKa-mb-d9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="306" y="1079"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mappin" catalog="system" width="105" height="128"/>
+    </resources>
+</document>
