@@ -12,7 +12,9 @@ import Kingfisher
 class MovieInfoViewController: UIViewController {
 
     var movieInfo = MovieDetailInfo()
+    var comments: [Comments] = []
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var releaseDate: UILabel!
@@ -25,11 +27,15 @@ class MovieInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.estimatedRowHeight = 150
+        tableView.rowHeight = UITableView.automaticDimension
 
     }
     
     override func viewDidAppear(_ animated: Bool) {
          fetchMovieInfo()
+         fetchComments()
+      
      }
      
      func fetchMovieInfo(){
@@ -41,6 +47,17 @@ class MovieInfoViewController: UIViewController {
                     }
          }
      }
+    
+    func fetchComments(){
+        RequestComments.requestComments(MovieDetailInfo.shared.movieId) { comments in
+            DispatchQueue.main.async {
+                print("\(comments.first?.contents)")
+                self.comments = comments
+          
+                self.tableView.reloadData()
+            }
+        }
+    }
     func updateUI(){
         let movie = movieInfo.movieInfo!
         
@@ -56,7 +73,25 @@ class MovieInfoViewController: UIViewController {
         actors.text = "\(movie.actor)/\(movie.director)"
     }
 }
+extension MovieInfoViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        comments.count
+    }
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CommentsCell", for: indexPath) as? CommentsCell else {
+            return UITableViewCell()
+        }
+        let comments = self.comments[indexPath.row]
+        cell.comments.text = "\(comments.contents)"
+        cell.date.text = "\(comments.timestamp)"
+        cell.rating.text = "\(comments.rating)"
+        cell.userName.text = "\(comments.writer)"
+        return cell
+    }
+
+}
 struct MovieInfo: Codable { // 클래스화해서 제이슨 파싱해서 들고있고 값뿌려줘야함 !
     let image: String
     let duration: Int
@@ -90,10 +125,29 @@ struct MovieInfo: Codable { // 클래스화해서 제이슨 파싱해서 들고�
             case title
     }
 }
+struct MovieComments:Codable {
+   let comments: [Comments]
+}
+struct Comments:Codable{
+    let rating: Double
+    let movie_id: String
+    let writer: String
+    let timestamp: Double
+    let id: String
+    let contents: String
+}
 
 class MovieDetailInfo {
     static let shared: MovieDetailInfo = MovieDetailInfo()
     var movieInfo: MovieInfo?
     var movieId : String = ""
 
+}
+
+class CommentsCell: UITableViewCell {
+    
+    @IBOutlet weak var comments: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var userName: UILabel!
 }

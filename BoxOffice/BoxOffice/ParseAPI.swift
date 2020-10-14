@@ -82,3 +82,42 @@ class SearchAPI {
         }
     }
 }
+
+class RequestComments {
+    static func requestComments(_ id: String, completion: @escaping ([Comments]) -> Void) {
+        print("-->Movie id: \(id)")
+        let session = URLSession(configuration: .default)
+        var urlComponents = URLComponents(string: "http://connect-boxoffice.run.goorm.io/comments?")!
+        let idQuery = URLQueryItem(name: "movie_id", value: id)
+        urlComponents.queryItems?.append(idQuery)
+        
+        let requestURL = urlComponents.url!
+        let dataTask = session.dataTask(with: requestURL){ data, Response, error in
+            let successRange = 200..<300
+            
+            guard error == nil,
+                let statusCode = (Response as? HTTPURLResponse)?.statusCode, successRange.contains(statusCode) else{
+                    return
+            }
+            guard let resultData = data else {
+                return
+            }
+            let comments = RequestComments.parseComments(resultData)
+            completion(comments)
+            
+        }
+        dataTask.resume()
+    }
+    
+    static func parseComments(_ data: Data) -> [Comments] {
+        let decoder = JSONDecoder()
+        do{
+            let response = try decoder.decode(MovieComments.self, from: data)
+            let comments = response.comments
+            return comments
+        }catch let error {
+            print("---> parsing error: \(error.localizedDescription)")
+            return[]
+        }
+    }
+}

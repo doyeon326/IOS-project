@@ -717,22 +717,66 @@
                                                             <constraint firstItem="kBU-C9-MKg" firstAttribute="leading" secondItem="flE-6J-xnG" secondAttribute="leading" constant="20" id="sWq-4d-RDp"/>
                                                         </constraints>
                                                     </view>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l9o-d6-YMw">
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l9o-d6-YMw">
                                                         <rect key="frame" x="0.0" y="810" width="414" height="300"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="300" id="11C-yB-Jks"/>
                                                         </constraints>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8gr-hN-hQ3">
-                                                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentsCell" rowHeight="150" id="8gr-hN-hQ3" customClass="CommentsCell" customModule="BoxOffice" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8gr-hN-hQ3" id="Pxl-Nx-3y9">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dnc-ZI-7ft">
+                                                                            <rect key="frame" x="11" y="11" width="88" height="88"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJX-f3-kdP">
+                                                                            <rect key="frame" x="107" y="11" width="45" height="21"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edU-2T-fmd">
+                                                                            <rect key="frame" x="107" y="29" width="30" height="21"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="별점" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdM-tf-e4L">
+                                                                            <rect key="frame" x="169" y="11" width="30" height="21"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="작성글 후기......" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZa-m8-rsZ">
+                                                                            <rect key="frame" x="107" y="58" width="106" height="21"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
                                                                 </tableViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="comments" destination="xZa-m8-rsZ" id="TsQ-b7-RRe"/>
+                                                                    <outlet property="date" destination="edU-2T-fmd" id="Az8-Cn-WkF"/>
+                                                                    <outlet property="rating" destination="xdM-tf-e4L" id="lHH-a7-ZOy"/>
+                                                                    <outlet property="userName" destination="cJX-f3-kdP" id="jDW-DX-GO2"/>
+                                                                </connections>
                                                             </tableViewCell>
                                                         </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="fEZ-Em-vug" id="VNy-FN-tDn"/>
+                                                            <outlet property="delegate" destination="fEZ-Em-vug" id="rb3-0V-4YJ"/>
+                                                        </connections>
                                                     </tableView>
                                                 </subviews>
                                             </stackView>
@@ -778,6 +822,7 @@
                         <outlet property="releaseDate" destination="6E1-Ja-apr" id="qgA-6g-aa5"/>
                         <outlet property="reservationRate" destination="Thg-f8-j4f" id="q1T-m8-Tqh"/>
                         <outlet property="summary" destination="xlA-dP-Qa2" id="PXb-xf-O6o"/>
+                        <outlet property="tableView" destination="l9o-d6-YMw" id="hGK-Lq-h19"/>
                         <outlet property="totalViewer" destination="q8j-PH-MzQ" id="b5v-yT-fp6"/>
                         <outlet property="userRating" destination="RWh-jj-Lcb" id="Sqo-JF-4e2"/>
                     </connections>
@@ -811,6 +856,7 @@
         <image name="delete.right.fill" catalog="system" width="128" height="104"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <image name="square.and.pencil" catalog="system" width="128" height="118"/>
         <image name="table" catalog="system" width="128" height="93"/>
