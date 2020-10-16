@@ -34,16 +34,16 @@ class MovieListViewController: UIViewController {
    
     }
     
-    @IBAction func sortType(_ sender: Any) {
-        //값만 받아서 present 해주기 ..
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as? MovieDetailViewController
-        if let indexPath = self.collectionView.indexPathsForSelectedItems {
-            let movieInfo = movies[indexPath.first!.item]
-                //  vc?.viewModel.update(model: movieInfo)
-              }
-      }
+//    @IBAction func sortType(_ sender: Any) {
+//        //값만 받아서 present 해주기 ..
+//    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let vc = segue.destination as? MovieDetailViewController
+//        if let indexPath = self.collectionView.indexPathsForSelectedItems {
+//            let movieInfo = movies[indexPath.first!.item]
+//                //  vc?.viewModel.update(model: movieInfo)
+//              }
+//      }
 }
 
 

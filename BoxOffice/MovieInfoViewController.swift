@@ -12,6 +12,8 @@ import Kingfisher
 class MovieInfoViewController: UIViewController {
 
     var movieInfo = MovieDetailInfo()
+    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+    var tableviewHeight: CGFloat = 30
     var comments: [Comments] = []
     
     @IBOutlet weak var tableView: UITableView!
@@ -27,7 +29,7 @@ class MovieInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.estimatedRowHeight = 150
+        tableView.estimatedRowHeight = 44.0
         tableView.rowHeight = UITableView.automaticDimension
 
     }
@@ -37,11 +39,23 @@ class MovieInfoViewController: UIViewController {
          fetchComments()
       
      }
-     
+
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.estimatedRowHeight
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        print(cell.frame.size.height, self.tableViewHeight)
+        self.tableviewHeight += cell.frame.size.height
+        tableViewHeight.constant = tableviewHeight
+        tableView.layoutIfNeeded()
+    }
+    
      func fetchMovieInfo(){
          SearchAPI.search(MovieDetailInfo.shared.movieId) { movie in
                     DispatchQueue.main.async {
                      self.movieInfo.movieInfo = movie
+                    //    print(movie.synopsis)
                      self.updateUI()
                      self.view.setNeedsLayout()
                     }
@@ -51,7 +65,7 @@ class MovieInfoViewController: UIViewController {
     func fetchComments(){
         RequestComments.requestComments(MovieDetailInfo.shared.movieId) { comments in
             DispatchQueue.main.async {
-                print("\(comments.first?.contents)")
+               //print("\(comments.first?.contents)")
                 self.comments = comments
           
                 self.tableView.reloadData()
