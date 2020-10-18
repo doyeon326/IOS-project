@@ -16,6 +16,7 @@ class MovieInfoViewController: UIViewController {
     var tableviewHeight: CGFloat = 30
     var comments: [Comments] = []
     
+    @IBOutlet var stars: [UIImageView]!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
@@ -57,6 +58,7 @@ class MovieInfoViewController: UIViewController {
                      self.movieInfo.movieInfo = movie
                     //    print(movie.synopsis)
                      self.updateUI()
+                   
                      self.view.setNeedsLayout()
                     }
          }
@@ -73,8 +75,9 @@ class MovieInfoViewController: UIViewController {
         }
     }
     func updateUI(){
+     
         let movie = movieInfo.movieInfo!
-        
+        self.navigationItem.title = movie.title
         let url = URL(string: movie.image)
         img.kf.setImage(with: url)
         movieTitle.text = movie.title
@@ -85,6 +88,30 @@ class MovieInfoViewController: UIViewController {
         reservationRate.text = "\(movie.reservationGrade)위 \(movie.reservationRate)%"
         summary.text = movie.synopsis
         actors.text = "\(movie.actor)/\(movie.director)"
+        
+        var count = 0
+        if movie.grade % 2 == 0{
+            count = Int(movie.userRating / 2) - 1 
+            print("--->count: \(count), movie grade: \(movie.userRating)")
+            for i in 0...count {
+                print("---->index: \(i)")
+                stars[i].image = UIImage(named: "ic_star_large_full")
+            }
+            
+        }
+        else {
+            count = Int(movie.userRating / 2) - 1
+             print("--->count: \(count), movie grade: \(movie.userRating)")
+            for i in 0...count {
+                print("---->index: \(i)")
+                stars[i].image = UIImage(named: "ic_star_large_full")
+            }
+            stars[count].image = UIImage(named: "ic_star_large_half")
+            count += 1
+        }
+//        for i in count...5 {
+//            stars[i].image = UIImage(named: "ic_star_large")
+//        }
     }
 }
 extension MovieInfoViewController: UITableViewDelegate, UITableViewDataSource {

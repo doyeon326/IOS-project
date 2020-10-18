@@ -12,7 +12,6 @@ import Kingfisher
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var movies: [Movie] = []
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +23,7 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let vc = segue.destination as? MovieDetailViewController
+        //    let vc = segue.destination as? MovieDetailViewController
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let movieInfo = movies[indexPath.row]
         
@@ -108,7 +107,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         ParseAPI.loadMovies(MovieType.shared.fetchType()) { movies in
         DispatchQueue.main.async {
                 self.movies = movies
-            
+        
             switch MovieType.shared.fetchType(){ //밖으로빼서 해주면 좋을듯
             case 0: self.navigationItem.title = "예매율순"
             case 1: self.navigationItem.title = "큐레이션순"
@@ -117,7 +116,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             default:
                 self.navigationItem.title = "예매율순"
             }
-            
                 self.tableView.reloadData()
             
         }

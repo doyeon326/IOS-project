@@ -10,8 +10,6 @@
 		EA6ED0EB25191BB100A7F2D2 /* ParseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6ED0EA25191BB100A7F2D2 /* ParseAPI.swift */; };
 		EA77F3392519FAE500765BB9 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA77F3382519FAE500765BB9 /* MovieListViewController.swift */; };
 		EA77F33C251A041B00765BB9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EA77F33B251A041B00765BB9 /* Kingfisher */; };
-		EA77F33E251A5FDC00765BB9 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA77F33D251A5FDC00765BB9 /* MovieDetailViewController.swift */; };
-		EAAE5CD3251B3F7A004A43A5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAE5CD2251B3F7A004A43A5 /* DetailViewController.swift */; };
 		EAC27EE2251888BC004CFC7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC27EE1251888BC004CFC7D /* AppDelegate.swift */; };
 		EAC27EE4251888BC004CFC7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC27EE3251888BC004CFC7D /* SceneDelegate.swift */; };
 		EAC27EE6251888BC004CFC7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC27EE5251888BC004CFC7D /* ViewController.swift */; };
@@ -24,8 +22,6 @@
 /* Begin PBXFileReference section */
 		EA6ED0EA25191BB100A7F2D2 /* ParseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseAPI.swift; sourceTree = "<group>"; };
 		EA77F3382519FAE500765BB9 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
-		EA77F33D251A5FDC00765BB9 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
-		EAAE5CD2251B3F7A004A43A5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EAC27EDE251888BC004CFC7D /* BoxOffice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoxOffice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC27EE1251888BC004CFC7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAC27EE3251888BC004CFC7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,14 +45,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EAAE5CD1251B3F37004A43A5 /* DetailViews */ = {
-			isa = PBXGroup;
-			children = (
-				EAAE5CD2251B3F7A004A43A5 /* DetailViewController.swift */,
-			);
-			path = DetailViews;
-			sourceTree = "<group>";
-		};
 		EAC27ED5251888BC004CFC7D = {
 			isa = PBXGroup;
 			children = (
@@ -76,13 +64,11 @@
 		EAC27EE0251888BC004CFC7D /* BoxOffice */ = {
 			isa = PBXGroup;
 			children = (
-				EAAE5CD1251B3F37004A43A5 /* DetailViews */,
 				EAC27EE1251888BC004CFC7D /* AppDelegate.swift */,
 				EAC27EE3251888BC004CFC7D /* SceneDelegate.swift */,
 				EA6ED0EA25191BB100A7F2D2 /* ParseAPI.swift */,
 				EA77F3382519FAE500765BB9 /* MovieListViewController.swift */,
 				EAC27EE5251888BC004CFC7D /* ViewController.swift */,
-				EA77F33D251A5FDC00765BB9 /* MovieDetailViewController.swift */,
 				EAEEE60C252EE90200311CCC /* MovieInfoViewController.swift */,
 				EAC27EE7251888BC004CFC7D /* Main.storyboard */,
 				EAC27EEA251888BE004CFC7D /* Assets.xcassets */,
@@ -174,9 +160,7 @@
 				EAC27EE2251888BC004CFC7D /* AppDelegate.swift in Sources */,
 				EAEEE60D252EE90200311CCC /* MovieInfoViewController.swift in Sources */,
 				EA6ED0EB25191BB100A7F2D2 /* ParseAPI.swift in Sources */,
-				EA77F33E251A5FDC00765BB9 /* MovieDetailViewController.swift in Sources */,
 				EAC27EE4251888BC004CFC7D /* SceneDelegate.swift in Sources */,
-				EAAE5CD3251B3F7A004A43A5 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
