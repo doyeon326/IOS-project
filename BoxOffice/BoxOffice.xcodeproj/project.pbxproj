@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0FE55B8D29F29ADED116DEA /* Pods_BoxOffice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF03CAB9B1B3D8C055100E59 /* Pods_BoxOffice.framework */; };
+		EA68FDE4253D962400887011 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA68FDE3253D962400887011 /* CommentViewController.swift */; };
 		EA6ED0EB25191BB100A7F2D2 /* ParseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6ED0EA25191BB100A7F2D2 /* ParseAPI.swift */; };
 		EA77F3392519FAE500765BB9 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA77F3382519FAE500765BB9 /* MovieListViewController.swift */; };
 		EA77F33C251A041B00765BB9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EA77F33B251A041B00765BB9 /* Kingfisher */; };
@@ -20,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32752468C84D6F37838A7BB9 /* Pods-BoxOffice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoxOffice.debug.xcconfig"; path = "Target Support Files/Pods-BoxOffice/Pods-BoxOffice.debug.xcconfig"; sourceTree = "<group>"; };
+		D66375ADF91B32A0854E4BFD /* Pods-BoxOffice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoxOffice.release.xcconfig"; path = "Target Support Files/Pods-BoxOffice/Pods-BoxOffice.release.xcconfig"; sourceTree = "<group>"; };
+		DF03CAB9B1B3D8C055100E59 /* Pods_BoxOffice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoxOffice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA68FDE3253D962400887011 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		EA6ED0EA25191BB100A7F2D2 /* ParseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseAPI.swift; sourceTree = "<group>"; };
 		EA77F3382519FAE500765BB9 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		EAC27EDE251888BC004CFC7D /* BoxOffice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoxOffice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,17 +45,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA77F33C251A041B00765BB9 /* Kingfisher in Frameworks */,
+				D0FE55B8D29F29ADED116DEA /* Pods_BoxOffice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		939E21F14B63864FE1FB4D7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32752468C84D6F37838A7BB9 /* Pods-BoxOffice.debug.xcconfig */,
+				D66375ADF91B32A0854E4BFD /* Pods-BoxOffice.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A94AB05575EFDACADE9F6D16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF03CAB9B1B3D8C055100E59 /* Pods_BoxOffice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EAC27ED5251888BC004CFC7D = {
 			isa = PBXGroup;
 			children = (
 				EAC27EE0251888BC004CFC7D /* BoxOffice */,
 				EAC27EDF251888BC004CFC7D /* Products */,
+				939E21F14B63864FE1FB4D7D /* Pods */,
+				A94AB05575EFDACADE9F6D16 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +97,7 @@
 				EAC27EE5251888BC004CFC7D /* ViewController.swift */,
 				EAEEE60C252EE90200311CCC /* MovieInfoViewController.swift */,
 				EAC27EE7251888BC004CFC7D /* Main.storyboard */,
+				EA68FDE3253D962400887011 /* CommentViewController.swift */,
 				EAC27EEA251888BE004CFC7D /* Assets.xcassets */,
 				EAC27EEC251888BE004CFC7D /* LaunchScreen.storyboard */,
 				EAC27EEF251888BE004CFC7D /* Info.plist */,
@@ -85,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAC27EF2251888BE004CFC7D /* Build configuration list for PBXNativeTarget "BoxOffice" */;
 			buildPhases = (
+				B6539926E175AB369DA09E3D /* [CP] Check Pods Manifest.lock */,
 				EAC27EDA251888BC004CFC7D /* Sources */,
 				EAC27EDB251888BC004CFC7D /* Frameworks */,
 				EAC27EDC251888BC004CFC7D /* Resources */,
+				6996B34775F549A3555ACEDA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,11 +179,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6996B34775F549A3555ACEDA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BoxOffice/Pods-BoxOffice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BoxOffice/Pods-BoxOffice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BoxOffice/Pods-BoxOffice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6539926E175AB369DA09E3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoxOffice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EAC27EDA251888BC004CFC7D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA68FDE4253D962400887011 /* CommentViewController.swift in Sources */,
 				EAC27EE6251888BC004CFC7D /* ViewController.swift in Sources */,
 				EA77F3392519FAE500765BB9 /* MovieListViewController.swift in Sources */,
 				EAC27EE2251888BC004CFC7D /* AppDelegate.swift in Sources */,
@@ -302,9 +374,11 @@
 		};
 		EAC27EF3251888BE004CFC7D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32752468C84D6F37838A7BB9 /* Pods-BoxOffice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 68663464K3;
 				INFOPLIST_FILE = BoxOffice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -319,9 +393,11 @@
 		};
 		EAC27EF4251888BE004CFC7D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D66375ADF91B32A0854E4BFD /* Pods-BoxOffice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 68663464K3;
 				INFOPLIST_FILE = BoxOffice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

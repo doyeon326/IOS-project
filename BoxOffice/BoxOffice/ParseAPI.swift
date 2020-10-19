@@ -121,3 +121,34 @@ class RequestComments {
         }
     }
 }
+
+func requestComment(comment: Comment){
+    let config = URLSessionConfiguration.default
+    let session = URLSession(configuration: config)
+    
+    guard let url: URL = URL(string: "http://connect-boxoffice.run.goorm.io/comment") else { return }
+    var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+    
+    let jsonEncode = JSONEncoder()
+    do {
+        let data: Data = try jsonEncode.encode(comment)
+        request.httpBody = data
+    } catch (let error) {
+        print(error.localizedDescription)
+    }
+    let dataTask: URLSessionDataTask = session.dataTask(with: request) {
+        (data, response, error) in
+        guard error == nil else { return }
+        
+        guard let resultData = data else { return }
+        do{
+            let jsonDecoder: JSONDecoder = JSONDecoder()
+            let commentResponse: Comment = try jsonDecoder.decode(Comment.self, from:data!)
+        }catch(let error){
+            print(error.localizedDescription)
+        }
+        
+    }
+    dataTask.resume()
+}

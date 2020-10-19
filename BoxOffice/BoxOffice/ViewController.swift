@@ -53,14 +53,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
        
         switch movies[indexPath.row].grade {
         case 12:
-            cell.circle.tintColor = .systemTeal
-        case 15: cell.circle.tintColor = .systemOrange
-        case 19: cell.circle.tintColor = .systemPink
+            cell.grade.image = UIImage(named: "ic_12")
+        case 15:  cell.grade.image = UIImage(named: "ic_15")
+        case 19:  cell.grade.image = UIImage(named: "ic_19")
         default:
-            cell.circle.tintColor = .systemGreen
+             cell.grade.image = UIImage(named: "ic_allages")
         }
-        cell.availableAge.text = "\(movies[indexPath.row].grade)"
-        
+   
         return cell
     }
     
@@ -133,8 +132,10 @@ class TableCell: UITableViewCell {
     @IBOutlet weak var availableAge: UILabel!
     //circle & label color need to be change
 
-    @IBOutlet weak var grade: UILabel!
+   
     @IBOutlet weak var circle: UIImageView!
+    
+    @IBOutlet weak var grade: UIImageView!
 }
 
 struct Response: Codable {

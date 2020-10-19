@@ -46,7 +46,7 @@ class MovieInfoViewController: UIViewController {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        print(cell.frame.size.height, self.tableViewHeight)
+        //print(cell.frame.size.height, self.tableViewHeight)
         self.tableviewHeight += cell.frame.size.height
         tableViewHeight.constant = tableviewHeight
         tableView.layoutIfNeeded()
@@ -56,7 +56,7 @@ class MovieInfoViewController: UIViewController {
          SearchAPI.search(MovieDetailInfo.shared.movieId) { movie in
                     DispatchQueue.main.async {
                      self.movieInfo.movieInfo = movie
-                    //    print(movie.synopsis)
+
                      self.updateUI()
                    
                      self.view.setNeedsLayout()
