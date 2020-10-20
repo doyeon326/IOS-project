@@ -12,6 +12,8 @@ import Cosmos
 class CommentViewController: UIViewController {
 
     
+    @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var movieGrade: UIImageView!
     @IBOutlet weak var cosmosView: CosmosView!
     @IBOutlet weak var rating: UILabel!
 
@@ -23,22 +25,33 @@ class CommentViewController: UIViewController {
         super.viewDidLoad()
         self.commentTxt.layer.borderWidth = 1.0
         self.commentTxt.layer.cornerRadius = 5
+        
         cosmosView.didFinishTouchingCosmos = { rating in
             print(rating)
             self.currentStar = rating * 2
         }
         cosmosView.didTouchCosmos = { rating in
-            self.rating.text = "\(rating * 2)"
+            self.rating.text = "\(Int(rating * 2))"
         }
+        movieTitle.text = MovieDetailInfo.shared.movieInfo?.title
+        let grade = MovieDetailInfo.shared.movieInfo?.grade
+        switch grade {
+        case 12: movieGrade.image = UIImage(named: "ic_12")
+        case 15: movieGrade.image = UIImage(named: "ic_15")
+        case 19: movieGrade.image = UIImage(named: "ic_19")
+        default:
+            movieGrade.image = UIImage(named: "ic_allages")
+        }
+        
         // Do any additional setup after loading the view.
     }
     
 
     @IBAction func sendRequest(_ sender: Any) {
         var comment = Comment(rating: currentStar, writer: commentTitle.text!, movie_id: MovieDetailInfo.shared.movieId, contents: commentTxt.text)
- 
         requestComment(comment: comment)
         print("completed")
+        navigationController?.popViewController(animated: true)
     }
 }
 struct Comment: Codable {

@@ -40,7 +40,7 @@ class MovieInfoViewController: UIViewController {
          fetchComments()
       
      }
-
+    //comment tableView
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return tableView.estimatedRowHeight
     }
@@ -56,9 +56,9 @@ class MovieInfoViewController: UIViewController {
          SearchAPI.search(MovieDetailInfo.shared.movieId) { movie in
                     DispatchQueue.main.async {
                      self.movieInfo.movieInfo = movie
-
+                        //굳이 안해두댐 하지만 평점쓸때 제목불러오는게 귀찮아서
+                        MovieDetailInfo.shared.movieInfo = movie
                      self.updateUI()
-                   
                      self.view.setNeedsLayout()
                     }
          }
@@ -69,13 +69,11 @@ class MovieInfoViewController: UIViewController {
             DispatchQueue.main.async {
                //print("\(comments.first?.contents)")
                 self.comments = comments
-          
                 self.tableView.reloadData()
             }
         }
     }
     func updateUI(){
-     
         let movie = movieInfo.movieInfo!
         self.navigationItem.title = movie.title
         let url = URL(string: movie.image)
@@ -89,31 +87,16 @@ class MovieInfoViewController: UIViewController {
         summary.text = movie.synopsis
         actors.text = "\(movie.actor)/\(movie.director)"
         
-        var count = 0
-        if movie.grade % 2 == 0{
-            count = Int(movie.userRating / 2) - 1 
-            print("--->count: \(count), movie grade: \(movie.userRating)")
-            for i in 0...count {
-                print("---->index: \(i)")
+        let star = Int(movie.userRating)
+            for i in 0..<(star/2){
                 stars[i].image = UIImage(named: "ic_star_large_full")
             }
-            
-        }
-        else {
-            count = Int(movie.userRating / 2) - 1
-             print("--->count: \(count), movie grade: \(movie.userRating)")
-            for i in 0...count {
-                print("---->index: \(i)")
-                stars[i].image = UIImage(named: "ic_star_large_full")
+            if(star%2==1){
+                stars[star/2].image = UIImage(named: "ic_star_large_half")
             }
-            stars[count].image = UIImage(named: "ic_star_large_half")
-            count += 1
-        }
-//        for i in count...5 {
-//            stars[i].image = UIImage(named: "ic_star_large")
-//        }
     }
 }
+//comment tableView
 extension MovieInfoViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -126,9 +109,15 @@ extension MovieInfoViewController: UITableViewDelegate, UITableViewDataSource {
         }
         let comments = self.comments[indexPath.row]
         cell.comments.text = "\(comments.contents)"
-        cell.date.text = "\(comments.timestamp)"
-        cell.rating.text = "\(comments.rating)"
+        cell.date.text = comments.timeFormatter()
         cell.userName.text = "\(comments.writer)"
+        let star = Int(comments.rating)
+        for i in 0..<(star/2){
+            cell.star[i].image = UIImage(named: "ic_star_large_full")
+        }
+        if(star%2==1){
+            cell.star[star/2].image = UIImage(named: "ic_star_large_half")
+        }
         return cell
     }
 
@@ -176,7 +165,15 @@ struct Comments:Codable{
     let timestamp: Double
     let id: String
     let contents: String
+    
+    func timeFormatter() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy.MM.dd HH:mm"
+        let date = Date(timeIntervalSince1970: self.timestamp)
+        return dateFormatter.string(from: date)
+    }
 }
+
 
 class MovieDetailInfo {
     static let shared: MovieDetailInfo = MovieDetailInfo()
@@ -189,6 +186,6 @@ class CommentsCell: UITableViewCell {
     
     @IBOutlet weak var comments: UILabel!
     @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var rating: UILabel!
+    @IBOutlet var star: [UIImageView]!
     @IBOutlet weak var userName: UILabel!
 }
