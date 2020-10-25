@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
+        //strong vs weak 
         reference1 = Person(name: "John Appleseed")
         // Prints "John Appleseed is being initialized"
         reference2 = reference1
@@ -25,7 +25,6 @@ class ViewController: UIViewController {
         
         reference1 = nil
         reference2 = nil
-        
         reference3 = nil
         // Prints "John Appleseed is being deinitialized"
     }
