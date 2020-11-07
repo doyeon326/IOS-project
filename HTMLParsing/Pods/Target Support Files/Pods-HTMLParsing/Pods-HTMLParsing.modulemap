@@ -1,0 +1,6 @@
+framework module Pods_HTMLParsing {
+  umbrella header "Pods-HTMLParsing-umbrella.h"
+
+  export *
+  module * { export * }
+}
