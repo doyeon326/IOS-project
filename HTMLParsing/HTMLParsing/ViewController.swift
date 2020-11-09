@@ -23,8 +23,9 @@ class ViewController: UIViewController {
     }()
 
 
-    let urlString = "https://www.google.com/search?q=iphone+12&sxsrf=ALeKk02a_ajGo3h6LIyRKKOR4k34izfnBw:1604575918542&source=lnms&tbm=isch&sa=X&ved=2ahUKEwijvI6Np-vsAhXBGaYKHVoSCOYQ_AUoAXoECBMQAw&biw=885&bih=678"
-    
+    let urlString = "https://www.lotteon.com/p/order/mylotte/orderDeliveryList" //롯데ON
+    //티몬 : let urlString = "https://www.tmon.co.kr/user/buyInfo"
+    //네이버 : https://order.pay.naver.com/home?tabMenu=SHOPPING
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(webView)
@@ -49,6 +50,8 @@ extension ViewController: WKNavigationDelegate {
             guard let html = result as? String, error == nil else {
                 return
             }
+            //print(html)
+        
             let document = HTMLDocument(string: html)
             print("created HTML")
             let images: [String] = document.querySelectorAll("img").compactMap({element in

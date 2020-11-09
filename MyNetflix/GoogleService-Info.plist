@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>540194421438-jaq37h96o1k23g4ar6lbqs1d2u5r0g17.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.540194421438-jaq37h96o1k23g4ar6lbqs1d2u5r0g17</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCdkXtCZXv3fG7acIulCgwFr6pS1zlbbNc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>540194421438</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.joonwon.MyNetflix</string>
+	<key>PROJECT_ID</key>
+	<string>mynetflix-1820a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mynetflix-1820a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:540194421438:ios:db97fb48c1fcf28458fcef</string>
+	<key>DATABASE_URL</key>
+	<string>https://mynetflix-1820a.firebaseio.com</string>
+</dict>
+</plist>

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,8 +21,8 @@
 		94DFD7552435DA88009687ED /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DFD7542435DA88009687ED /* SearchViewController.swift */; };
 		94DFD7812436F11B009687ED /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DFD7802436F11B009687ED /* PlayerView.swift */; };
 		EA4EB3752513607B00453CE4 /* UpComingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4EB3742513607B00453CE4 /* UpComingViewController.swift */; };
-		EA4EB37B2513802A00453CE4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA4EB37A2513802A00453CE4 /* GoogleService-Info.plist */; };
 		EA4EB37D2513876D00453CE4 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4EB37C2513876D00453CE4 /* HistoryViewController.swift */; };
+		EA5E768D2557AD9700BB85D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA5E768C2557AD9700BB85D3 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,8 +56,8 @@
 		94DFD7542435DA88009687ED /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		94DFD7802436F11B009687ED /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		EA4EB3742513607B00453CE4 /* UpComingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingViewController.swift; sourceTree = "<group>"; };
-		EA4EB37A2513802A00453CE4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA4EB37C2513876D00453CE4 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		EA5E768C2557AD9700BB85D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		ECFE2C9E552B1F4214E4DF44 /* Pods-MyNetflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNetflix.release.xcconfig"; path = "Target Support Files/Pods-MyNetflix/Pods-MyNetflix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,7 +117,7 @@
 				94098357243468AE00FD1040 /* Assets.xcassets */,
 				94098359243468AE00FD1040 /* LaunchScreen.storyboard */,
 				9409835C243468AE00FD1040 /* Info.plist */,
-				EA4EB37A2513802A00453CE4 /* GoogleService-Info.plist */,
+				EA5E768C2557AD9700BB85D3 /* GoogleService-Info.plist */,
 				EA4EB37C2513876D00453CE4 /* HistoryViewController.swift */,
 			);
 			path = MyNetflix;
@@ -193,7 +193,7 @@
 			files = (
 				9409835B243468AE00FD1040 /* LaunchScreen.storyboard in Resources */,
 				94098367243469D700FD1040 /* Player.storyboard in Resources */,
-				EA4EB37B2513802A00453CE4 /* GoogleService-Info.plist in Resources */,
+				EA5E768D2557AD9700BB85D3 /* GoogleService-Info.plist in Resources */,
 				94098358243468AE00FD1040 /* Assets.xcassets in Resources */,
 				94098356243468AA00FD1040 /* Main.storyboard in Resources */,
 			);

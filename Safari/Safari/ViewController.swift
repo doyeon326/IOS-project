@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet var webview: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        webview.load(URLRequest(url: URL(string: "https://nid.naver.com/nidlogin.login?svctype=262144&amp;url=http://m.naver.com/aside/")!))
+        webview.load(URLRequest(url: URL(string: "https://order.pay.naver.com/home?tabMenu=SHOPPING/")!))
     }
 
 //    @IBAction func buttonTapped(){
