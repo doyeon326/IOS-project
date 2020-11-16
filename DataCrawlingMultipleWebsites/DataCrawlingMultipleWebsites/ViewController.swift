@@ -25,6 +25,7 @@ class ViewController: UIViewController{
         //2. 코드정리
         //3. 데이터 전달할수있는 효율적인 방법?
     }
+    
     @IBAction func tappedGoogle(_ sender: UIButton) {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "WebViewController") as? WebViewController else { return }
 
