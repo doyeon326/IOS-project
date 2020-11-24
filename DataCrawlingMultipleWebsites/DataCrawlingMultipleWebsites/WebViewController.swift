@@ -18,20 +18,20 @@ class WebViewController: UIViewController {
 
     }
     func loadWebView(){
-        let url = URL(string: urlString)!
-        let request = URLRequest(url: url)
-        webView.frame = view.bounds
-        webView.load(request)
         view.addSubview(webView)
+        webView.navigationDelegate = self
+        guard let url = URL(string: urlString) else { return }
+        webView.frame = view.bounds
+        webView.load(URLRequest(url: url))
+       
         
         webView.evaluateJavaScript("document.getElementsByTagName('html')[0].innerHTML", completionHandler: {(value, error) in
             print("INNER HTML \(value)")
         })
     }
-
 }
+
 extension WebViewController: WKNavigationDelegate {
-    //왜 안불릴까? 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("Called when the navigation is complete.")
     }

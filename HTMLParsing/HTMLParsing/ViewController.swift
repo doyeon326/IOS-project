@@ -41,6 +41,7 @@ class ViewController: UIViewController {
 extension ViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         //parsing
+        print("called function")
         parseImages()
     }
     

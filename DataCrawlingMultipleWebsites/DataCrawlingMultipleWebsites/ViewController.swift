@@ -21,7 +21,7 @@ class ViewController: UIViewController{
         
         vc.urlString = "https://m.naver.com/"
         self.navigationController?.pushViewController(vc, animated: true)
-        //1. webView를 다음 컨트롤러에 띄어야할까?
+        //1. webView를 다음 컨트롤러에 띄어야할$까?
         //2. 코드정리
         //3. 데이터 전달할수있는 효율적인 방법?
     }
