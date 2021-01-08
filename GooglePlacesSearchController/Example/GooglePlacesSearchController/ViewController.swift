@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         synthesizer.speak(utterance)
     }
     
-    let GoogleMapsAPIServerKey = "AIzaSyBdXLQ3YyLiRoSoeo3J9lw6pGA8KH2CZts"
+    let GoogleMapsAPIServerKey = "API KEY"
 
 
     lazy var placesSearchController: GooglePlacesSearchController = {
