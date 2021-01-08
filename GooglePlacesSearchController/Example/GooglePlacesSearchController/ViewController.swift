@@ -55,12 +55,13 @@ class ViewController: UIViewController {
     @IBAction func button(_ sender: Any) {
         let synthesizer = AVSpeechSynthesizer()
         let utterance = AVSpeechUtterance(string: " \(address.text!)")
-        utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
+        utterance.voice = AVSpeechSynthesisVoice(language: "th-TH")
         utterance.rate = 0.4
         synthesizer.speak(utterance)
     }
     
     let GoogleMapsAPIServerKey = "AIzaSyBdXLQ3YyLiRoSoeo3J9lw6pGA8KH2CZts"
+
 
     lazy var placesSearchController: GooglePlacesSearchController = {
         let controller = GooglePlacesSearchController(delegate: self,
