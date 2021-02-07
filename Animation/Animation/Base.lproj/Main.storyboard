@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Svc-nB-Scd">
+                                <rect key="frame" x="76" y="227" width="262" height="192"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="262" id="FK8-wl-L71"/>
+                                    <constraint firstAttribute="height" constant="192" id="u2Z-jI-eLL"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drg-Mq-gD5">
+                                <rect key="frame" x="144.5" y="489" width="125" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Animate">
+                                    <color key="titleColor" systemColor="opaqueSeparatorColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateBtnDidtouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4sN-fa-RPl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8j-fy-gwm">
+                                <rect key="frame" x="20" y="51" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSf-bl-b50">
+                                <rect key="frame" x="144.5" y="551" width="125" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Animate">
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateLabelBtnDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CZ1-og-DCP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkM-g7-tGh">
+                                <rect key="frame" x="163" y="778" width="88" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateLabelBtnDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2GV-dE-VUU"/>
+                                    <segue destination="Y09-dN-BeC" kind="show" id="dHl-9P-0v3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="drg-Mq-gD5" firstAttribute="top" secondItem="Svc-nB-Scd" secondAttribute="bottom" constant="70" id="3sy-sE-bsL"/>
+                            <constraint firstItem="Svc-nB-Scd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="B7b-Ys-Ud0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gkM-g7-tGh" secondAttribute="bottom" constant="30" id="NaP-4U-t5e"/>
+                            <constraint firstItem="bSf-bl-b50" firstAttribute="top" secondItem="drg-Mq-gD5" secondAttribute="bottom" constant="8" symbolic="YES" id="ONZ-ob-CbE"/>
+                            <constraint firstItem="gkM-g7-tGh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OXS-dw-z6o"/>
+                            <constraint firstItem="bSf-bl-b50" firstAttribute="centerX" secondItem="drg-Mq-gD5" secondAttribute="centerX" id="QBn-0g-Nt1"/>
+                            <constraint firstItem="Svc-nB-Scd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="183" id="VK4-sR-0Aq"/>
+                            <constraint firstItem="drg-Mq-gD5" firstAttribute="centerX" secondItem="Svc-nB-Scd" secondAttribute="centerX" id="cbb-hj-cQp"/>
+                            <constraint firstItem="L8j-fy-gwm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eny-xd-mZA"/>
+                            <constraint firstItem="L8j-fy-gwm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="vw2-kP-Wsd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bonacinno" destination="Svc-nB-Scd" id="bpr-4V-vQz"/>
+                        <outlet property="simpleLabel" destination="L8j-fy-gwm" id="xne-WQ-TxR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
+        </scene>
+        <!--Parallax Effect View Controller-->
+        <scene sceneID="lxW-fu-WMo">
+            <objects>
+                <viewController id="Y09-dN-BeC" customClass="ParallaxEffectViewController" customModule="Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kLV-Ra-JtE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="JfC-0d-JNE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7ii-ef-CDp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7ii-ef-CDp" firstAttribute="trailing" secondItem="JfC-0d-JNE" secondAttribute="trailing" id="Dfv-k8-hb1"/>
+                            <constraint firstItem="7ii-ef-CDp" firstAttribute="bottom" secondItem="JfC-0d-JNE" secondAttribute="bottom" id="MqH-Jo-PIz"/>
+                            <constraint firstItem="JfC-0d-JNE" firstAttribute="top" secondItem="7ii-ef-CDp" secondAttribute="top" id="rea-vc-anS"/>
+                            <constraint firstItem="JfC-0d-JNE" firstAttribute="leading" secondItem="7ii-ef-CDp" secondAttribute="leading" id="vQe-Ds-GLm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PGr-x4-uR5"/>
+                    <connections>
+                        <outlet property="imageView" destination="JfC-0d-JNE" id="oGQ-ud-XSh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lsR-U1-JQT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="133"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image" width="1936" height="1938"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
