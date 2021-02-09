@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Core Animation View Controller-->
+        <scene sceneID="lCc-dR-1yS">
+            <objects>
+                <viewController id="AbI-qY-w3d" customClass="CoreAnimationViewController" customModule="Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1F1-9P-Ymk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dLi-ge-1Ro"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tuP-pM-IcU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H0Q-G9-PdC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-729" y="115"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -61,6 +77,28 @@
                                     <segue destination="Y09-dN-BeC" kind="show" id="dHl-9P-0v3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUb-iZ-lZQ">
+                                <rect key="frame" x="144.5" y="613" width="125" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Animate">
+                                    <color key="titleColor" systemColor="systemPurpleColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateLabelBtnDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ehn-Gr-hZ3"/>
+                                    <segue destination="AbI-qY-w3d" kind="show" id="ufx-b4-Ato"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXS-Zt-xiN">
+                                <rect key="frame" x="144" y="675" width="125" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Animate">
+                                    <color key="titleColor" systemColor="systemTealColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateLabelBtnDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zVU-Ag-8iX"/>
+                                    <segue destination="b14-pq-RO0" kind="show" id="Vvp-MO-TXV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -71,9 +109,13 @@
                             <constraint firstItem="bSf-bl-b50" firstAttribute="top" secondItem="drg-Mq-gD5" secondAttribute="bottom" constant="8" symbolic="YES" id="ONZ-ob-CbE"/>
                             <constraint firstItem="gkM-g7-tGh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OXS-dw-z6o"/>
                             <constraint firstItem="bSf-bl-b50" firstAttribute="centerX" secondItem="drg-Mq-gD5" secondAttribute="centerX" id="QBn-0g-Nt1"/>
+                            <constraint firstItem="lUb-iZ-lZQ" firstAttribute="top" secondItem="bSf-bl-b50" secondAttribute="bottom" constant="8" symbolic="YES" id="QDa-jz-VxX"/>
                             <constraint firstItem="Svc-nB-Scd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="183" id="VK4-sR-0Aq"/>
+                            <constraint firstItem="TXS-Zt-xiN" firstAttribute="centerX" secondItem="lUb-iZ-lZQ" secondAttribute="centerX" id="bRP-NB-tUk"/>
                             <constraint firstItem="drg-Mq-gD5" firstAttribute="centerX" secondItem="Svc-nB-Scd" secondAttribute="centerX" id="cbb-hj-cQp"/>
+                            <constraint firstItem="lUb-iZ-lZQ" firstAttribute="centerX" secondItem="bSf-bl-b50" secondAttribute="centerX" id="emt-UR-Ihn"/>
                             <constraint firstItem="L8j-fy-gwm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eny-xd-mZA"/>
+                            <constraint firstItem="TXS-Zt-xiN" firstAttribute="top" secondItem="lUb-iZ-lZQ" secondAttribute="bottom" constant="8" symbolic="YES" id="p2r-QC-Vnn"/>
                             <constraint firstItem="L8j-fy-gwm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="vw2-kP-Wsd"/>
                         </constraints>
                     </view>
@@ -85,6 +127,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
+        </scene>
+        <!--Core Animation Simple View Controller-->
+        <scene sceneID="2iB-9z-7kX">
+            <objects>
+                <viewController id="b14-pq-RO0" customClass="CoreAnimationSimpleViewController" customModule="Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IWq-kc-zsP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="460-DZ-AoH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9b3-nK-Fp0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ubf-7W-5ms" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110" y="770"/>
         </scene>
         <!--Parallax Effect View Controller-->
         <scene sceneID="lxW-fu-WMo">
@@ -130,6 +188,12 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
