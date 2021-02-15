@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EA0A890125D019D00092C5FB /* CoreAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0A890025D019CF0092C5FB /* CoreAnimationViewController.swift */; };
 		EA0A890825D25DB80092C5FB /* CoreAnimationSimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0A890725D25DB80092C5FB /* CoreAnimationSimpleViewController.swift */; };
+		EA46C25625DA3BB5001DC3FB /* UIAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46C25525DA3BB5001DC3FB /* UIAnimationViewController.swift */; };
 		EA59B8CF25CFA3FF0067A837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59B8CE25CFA3FF0067A837 /* AppDelegate.swift */; };
 		EA59B8D125CFA3FF0067A837 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59B8D025CFA3FF0067A837 /* SceneDelegate.swift */; };
 		EA59B8D325CFA3FF0067A837 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59B8D225CFA3FF0067A837 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 		D53DF24DB32533B2F4B0A64B /* Pods-Animation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animation.release.xcconfig"; path = "Target Support Files/Pods-Animation/Pods-Animation.release.xcconfig"; sourceTree = "<group>"; };
 		EA0A890025D019CF0092C5FB /* CoreAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAnimationViewController.swift; sourceTree = "<group>"; };
 		EA0A890725D25DB80092C5FB /* CoreAnimationSimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAnimationSimpleViewController.swift; sourceTree = "<group>"; };
+		EA46C25525DA3BB5001DC3FB /* UIAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAnimationViewController.swift; sourceTree = "<group>"; };
 		EA59B8CB25CFA3FF0067A837 /* Animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA59B8CE25CFA3FF0067A837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA59B8D025CFA3FF0067A837 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				EA59B8D925CFA40E0067A837 /* LaunchScreen.storyboard */,
 				EA59B8DC25CFA40E0067A837 /* Info.plist */,
 				EA0A890725D25DB80092C5FB /* CoreAnimationSimpleViewController.swift */,
+				EA46C25525DA3BB5001DC3FB /* UIAnimationViewController.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				EA0A890825D25DB80092C5FB /* CoreAnimationSimpleViewController.swift in Sources */,
 				EA59B8E425CFB8B30067A837 /* ParallaxEffectViewController.swift in Sources */,
 				EA0A890125D019D00092C5FB /* CoreAnimationViewController.swift in Sources */,
+				EA46C25625DA3BB5001DC3FB /* UIAnimationViewController.swift in Sources */,
 				EA59B8D125CFA3FF0067A837 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

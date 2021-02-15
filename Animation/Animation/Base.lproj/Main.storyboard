@@ -41,8 +41,8 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drg-Mq-gD5">
-                                <rect key="frame" x="144.5" y="489" width="125" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <rect key="frame" x="165.5" y="489" width="83" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Animate">
                                     <color key="titleColor" systemColor="opaqueSeparatorColor"/>
                                 </state>
@@ -57,8 +57,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSf-bl-b50">
-                                <rect key="frame" x="144.5" y="551" width="125" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <rect key="frame" x="162" y="537" width="90" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Animate">
                                     <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
@@ -78,8 +78,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUb-iZ-lZQ">
-                                <rect key="frame" x="144.5" y="613" width="125" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <rect key="frame" x="162" y="587" width="90" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Animate">
                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                 </state>
@@ -89,8 +89,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXS-Zt-xiN">
-                                <rect key="frame" x="144" y="675" width="125" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <rect key="frame" x="162" y="637" width="90" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Animate">
                                     <color key="titleColor" systemColor="systemTealColor"/>
                                 </state>
@@ -99,12 +99,24 @@
                                     <segue destination="b14-pq-RO0" kind="show" id="Vvp-MO-TXV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNA-ju-twG">
+                                <rect key="frame" x="162" y="679" width="90" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Animate">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateLabelBtnDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xL3-S5-aVM"/>
+                                    <segue destination="rx8-WY-dLx" kind="show" id="fKr-1c-iab"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="drg-Mq-gD5" firstAttribute="top" secondItem="Svc-nB-Scd" secondAttribute="bottom" constant="70" id="3sy-sE-bsL"/>
                             <constraint firstItem="Svc-nB-Scd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="B7b-Ys-Ud0"/>
+                            <constraint firstItem="dNA-ju-twG" firstAttribute="top" secondItem="TXS-Zt-xiN" secondAttribute="bottom" id="Ko0-ko-Zn4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gkM-g7-tGh" secondAttribute="bottom" constant="30" id="NaP-4U-t5e"/>
                             <constraint firstItem="bSf-bl-b50" firstAttribute="top" secondItem="drg-Mq-gD5" secondAttribute="bottom" constant="8" symbolic="YES" id="ONZ-ob-CbE"/>
                             <constraint firstItem="gkM-g7-tGh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OXS-dw-z6o"/>
@@ -115,18 +127,61 @@
                             <constraint firstItem="drg-Mq-gD5" firstAttribute="centerX" secondItem="Svc-nB-Scd" secondAttribute="centerX" id="cbb-hj-cQp"/>
                             <constraint firstItem="lUb-iZ-lZQ" firstAttribute="centerX" secondItem="bSf-bl-b50" secondAttribute="centerX" id="emt-UR-Ihn"/>
                             <constraint firstItem="L8j-fy-gwm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eny-xd-mZA"/>
+                            <constraint firstItem="dNA-ju-twG" firstAttribute="centerX" secondItem="TXS-Zt-xiN" secondAttribute="centerX" id="krE-pn-dOg"/>
                             <constraint firstItem="TXS-Zt-xiN" firstAttribute="top" secondItem="lUb-iZ-lZQ" secondAttribute="bottom" constant="8" symbolic="YES" id="p2r-QC-Vnn"/>
                             <constraint firstItem="L8j-fy-gwm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="vw2-kP-Wsd"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bonacinno" destination="Svc-nB-Scd" id="bpr-4V-vQz"/>
                         <outlet property="simpleLabel" destination="L8j-fy-gwm" id="xne-WQ-TxR"/>
+                        <outlet property="simpleView" destination="Svc-nB-Scd" id="bpr-4V-vQz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
+        </scene>
+        <!--Animation View Controller-->
+        <scene sceneID="5E7-bg-ufF">
+            <objects>
+                <viewController id="rx8-WY-dLx" customClass="UIAnimationViewController" customModule="Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="znT-2J-5W1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfp-4X-rEx">
+                                <rect key="frame" x="87" y="134" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="HWt-K0-PmX"/>
+                                    <constraint firstAttribute="height" constant="128" id="nDd-Gc-pJn"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIK-Ir-2JW">
+                                <rect key="frame" x="184" y="561" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="animateBtnDidTouch:" destination="rx8-WY-dLx" eventType="touchUpInside" id="gk4-IA-Yb6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="w4c-Vh-2eT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dIK-Ir-2JW" firstAttribute="top" secondItem="lfp-4X-rEx" secondAttribute="bottom" constant="299" id="MH8-JU-BF0"/>
+                            <constraint firstItem="dIK-Ir-2JW" firstAttribute="centerX" secondItem="lfp-4X-rEx" secondAttribute="centerX" id="g2N-xy-7mu"/>
+                            <constraint firstItem="lfp-4X-rEx" firstAttribute="top" secondItem="w4c-Vh-2eT" secondAttribute="top" constant="134" id="hlu-5s-Dxf"/>
+                            <constraint firstItem="lfp-4X-rEx" firstAttribute="centerX" secondItem="w4c-Vh-2eT" secondAttribute="centerX" id="xbI-NK-Bu3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="h2A-21-ERW"/>
+                    <connections>
+                        <outlet property="animationView" destination="lfp-4X-rEx" id="4te-pY-SEN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pfk-U2-u3l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-737" y="793"/>
         </scene>
         <!--Core Animation Simple View Controller-->
         <scene sceneID="2iB-9z-7kX">
@@ -186,11 +241,17 @@
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
