@@ -1,1 +1,0 @@
-../../../FirebaseDatabase/FirebaseDatabase/Sources/Api/FIRDatabaseConfig.h

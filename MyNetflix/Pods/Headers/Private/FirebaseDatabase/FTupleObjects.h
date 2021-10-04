@@ -1,1 +1,0 @@
-../../../FirebaseDatabase/FirebaseDatabase/Sources/Utilities/Tuples/FTupleObjects.h

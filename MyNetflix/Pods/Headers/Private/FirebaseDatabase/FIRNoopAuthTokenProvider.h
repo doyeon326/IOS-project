@@ -1,1 +1,0 @@
-../../../FirebaseDatabase/FirebaseDatabase/Sources/Login/FIRNoopAuthTokenProvider.h

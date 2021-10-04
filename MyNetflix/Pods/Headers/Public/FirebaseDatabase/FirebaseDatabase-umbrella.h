@@ -1,1 +1,0 @@
-../../../Target Support Files/FirebaseDatabase/FirebaseDatabase-umbrella.h

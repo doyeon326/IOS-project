@@ -1,1 +1,0 @@
-../../../FirebaseDatabase/FirebaseCore/Sources/Private/FIRHeartbeatInfo.h
